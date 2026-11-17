@@ -1,0 +1,371 @@
+          <div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Hubungi Kami &amp; Akses Awal</span>
+            </span>
+            <h2 class="section-heading">
+              Daftar akses awal atau <em>berbincang dengan tim kami di Jakarta.</em>
+            </h2>
+            <p class="section-lead">
+              Baik Anda orang tua yang menantikan peluncuran di iOS &amp; Android, sekolah atau klinik yang siap bermitra,
+              maupun ingin mengajukan pertanyaan—tim kami membalas dalam 1–2 hari kerja.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-pink">
+              <h3>Keluarga &amp; Bantuan</h3>
+              <p>Pertanyaan seputar aplikasi KIIDA, akses awal, atau Growth Diary buah hati Anda.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Umum:</strong> <a href="mailto:{{site.email.hello}}">{{site.email.hello}}</a><br />
+                <strong>Bantuan:</strong> <a href="mailto:{{site.email.support}}">{{site.email.support}}</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <h3>Sekolah, Studio &amp; Klinik</h3>
+              <p>Tertarik mendaftarkan guru Anda atau menampilkan kelas dan layanan konsultasi di KIIDA.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Kemitraan:</strong> <a href="mailto:{{site.email.partners}}">{{site.email.partners}}</a><br />
+                <strong>WhatsApp:</strong> <a href="{{site.whatsappHref}}">{{site.whatsappDisplay}}</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <h3>Kantor Pusat Jakarta</h3>
+              <p>
+                <strong>{{site.legalName}}</strong><br />
+                {{site.address.fullId}}
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Telepon:</strong> <a href="tel:{{site.phoneHref}}">{{site.phoneDisplay}}</a><br />
+                <strong>Jam Kerja:</strong> {{site.hours.id}}<br />
+                <a href="{{site.address.mapsUrl}}" target="_blank" rel="noopener noreferrer">Buka di Google Maps ↗</a>
+              </p>
+            </article>
+          </div>
+
+          <div class="form-card tabs-container">
+            <div role="tablist" class="tabs-bar" aria-label="Pilih formulir permohonan">
+              <button
+                type="button"
+                role="tab"
+                id="id-tab-ea"
+                data-tab-key="early-access"
+                aria-selected="true"
+                tabindex="0"
+              >
+                Daftar Akses Awal
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="id-tab-partner"
+                data-tab-key="partner"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Kemitraan (Sekolah &amp; Klinik)
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="id-tab-msg"
+                data-tab-key="message"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Pesan Umum
+              </button>
+            </div>
+
+            <!-- Panel 1: Early Access -->
+            <div role="tabpanel" aria-labelledby="id-tab-ea">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Daftar ke Antrean Akses Awal
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Beri tahu kami peran Anda dan kami akan mengundang Anda segera setelah KIIDA hadir di iOS &amp; Android.
+                </p>
+
+                <form
+                  action="mailto:{{site.email.hello}}"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="{{site.email.hello}}"
+                  data-subject="Permintaan Akses Awal KIIDA"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-ea-name">Nama lengkap Anda <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-ea-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        enterkeyhint="next"
+                        data-error="id-ea-name-error"
+                      />
+                      <div id="id-ea-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama lengkap Anda.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-ea-email">Alamat email <span aria-hidden="true">*</span></label>
+                      <span id="id-ea-email-hint" class="hint">Format: nama@example.com</span>
+                      <input
+                        type="email"
+                        id="id-ea-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        enterkeyhint="next"
+                        aria-describedby="id-ea-email-hint"
+                        data-error="id-ea-email-error"
+                      />
+                      <div id="id-ea-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Masukkan alamat email dengan format nama@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-ea-role">Saya mendaftar sebagai <span aria-hidden="true">*</span></label>
+                    <select id="id-ea-role" name="role" required data-error="id-ea-role-error">
+                      <option value="">Pilih salah satu…</option>
+                      <option value="Parent">Orang tua atau wali</option>
+                      <option value="Teacher">Guru prasekolah atau PAUD</option>
+                      <option value="Learning Center">Tempat belajar atau studio sensori</option>
+                      <option value="Medical Clinic">Klinik anak atau terapi tumbuh kembang</option>
+                    </select>
+                    <div id="id-ea-role-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Silakan pilih bagaimana Anda berencana menggunakan KIIDA.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Daftar Akses Awal</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Terima kasih! Permintaan akses awal Anda telah siap—jika aplikasi email Anda terbuka, silakan tekan
+                    kirim, atau hubungi kami kapan saja di {{site.email.hello}}.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 2: Partner Inquiry -->
+            <div role="tabpanel" aria-labelledby="id-tab-partner" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Formulir Kemitraan
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Tim kemitraan kami di <strong>{{site.email.partners}}</strong> akan membalas dalam 1–2 hari kerja.
+                </p>
+
+                <form
+                  action="mailto:{{site.email.partners}}"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="{{site.email.partners}}"
+                  data-subject="Pengajuan Kemitraan KIIDA"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-pt-org">Nama sekolah, studio, atau klinik <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-pt-org"
+                        name="organization"
+                        required
+                        autocomplete="organization"
+                        data-error="id-pt-org-error"
+                      />
+                      <div id="id-pt-org-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama sekolah atau instansi Anda.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-pt-name">Nama penanggung jawab <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-pt-name"
+                        name="contact_name"
+                        required
+                        autocomplete="name"
+                        data-error="id-pt-name-error"
+                      />
+                      <div id="id-pt-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama penanggung jawab.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-pt-email">Email instansi / resmi <span aria-hidden="true">*</span></label>
+                      <span id="id-pt-email-hint" class="hint">Format: nama@sekolah.sch.id</span>
+                      <input
+                        type="email"
+                        id="id-pt-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="id-pt-email-hint"
+                        data-error="id-pt-email-error"
+                      />
+                      <div id="id-pt-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Masukkan alamat email dengan format nama@sekolah.sch.id.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-pt-phone">Nomor telepon / WhatsApp <span aria-hidden="true">*</span></label>
+                      <input
+                        type="tel"
+                        id="id-pt-phone"
+                        name="phone"
+                        required
+                        autocomplete="tel"
+                        data-error="id-pt-phone-error"
+                      />
+                      <div id="id-pt-phone-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nomor telepon atau WhatsApp aktif.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-pt-type">Kategori program <span aria-hidden="true">*</span></label>
+                    <select id="id-pt-type" name="category" required data-error="id-pt-type-error">
+                      <option value="">Pilih kategori…</option>
+                      <option value="Preschool / Kindergarten">Prasekolah, KB, atau TK</option>
+                      <option value="Sensory Play / Art / Music Studio">Studio Bermain Sensori, Seni, atau Musik</option>
+                      <option value="Speech / Occupational Therapy Clinic">Klinik Terapi Wicara atau Okupasi</option>
+                      <option value="Pediatric / Developmental Clinic">Klinik Dokter Anak atau Tumbuh Kembang</option>
+                      <option value="Educational Goods / Toys Brand">Mitra Mainan Edukasi &amp; Perlengkapan Anak</option>
+                    </select>
+                    <div id="id-pt-type-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Silakan pilih kategori utama tempat Anda.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-pt-notes">Ceritakan tentang program &amp; kota domisili Anda</label>
+                    <textarea id="id-pt-notes" name="notes" rows="3"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Kirim Pengajuan Kemitraan</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Terima kasih! Pengajuan kemitraan Anda telah siap dikirim ke {{site.email.partners}}.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 3: General Message -->
+            <div role="tabpanel" aria-labelledby="id-tab-msg" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Kirimkan Pesan untuk Kami
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Isi formulir di bawah ini dan tim kami di Jakarta akan membalas pesan Anda dalam 1–2 hari kerja.
+                </p>
+
+                <form
+                  action="mailto:{{site.email.hello}}"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="{{site.email.hello}}"
+                  data-subject="Pesan Kontak Website KIIDA"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-ct-name">Nama lengkap Anda <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-ct-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        data-error="id-ct-name-error"
+                      />
+                      <div id="id-ct-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama lengkap Anda.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-ct-email">Alamat email <span aria-hidden="true">*</span></label>
+                      <span id="id-ct-email-hint" class="hint">Format: nama@example.com</span>
+                      <input
+                        type="email"
+                        id="id-ct-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="id-ct-email-hint"
+                        data-error="id-ct-email-error"
+                      />
+                      <div id="id-ct-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Masukkan alamat email dengan format nama@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-ct-topic">Topik <span aria-hidden="true">*</span></label>
+                    <select id="id-ct-topic" name="topic" required data-error="id-ct-topic-error">
+                      <option value="">Pilih topik…</option>
+                      <option value="Family / Early Access">Pertanyaan seputar keluarga atau akses awal</option>
+                      <option value="School / Teacher">Pendaftaran sekolah atau guru</option>
+                      <option value="Learning Center / Clinic Partnership">Kemitraan tempat belajar atau klinik</option>
+                      <option value="Privacy / Data Request">Permintaan data atau privasi</option>
+                      <option value="General Inquiry">Pertanyaan umum</option>
+                    </select>
+                    <div id="id-ct-topic-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Silakan pilih salah satu topik.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-ct-message">Pesan <span aria-hidden="true">*</span></label>
+                    <textarea
+                      id="id-ct-message"
+                      name="message"
+                      rows="4"
+                      required
+                      data-error="id-ct-message-error"
+                    ></textarea>
+                    <div id="id-ct-message-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Mohon tuliskan pesan Anda.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Terima kasih! Pesan Anda telah siap dikirim—kami akan membalas dalam 1–2 hari kerja.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>

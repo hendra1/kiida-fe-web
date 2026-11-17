@@ -1,0 +1,1392 @@
+/* ==========================================================================
+   KIIDA — Soft & Heartwarming Design System (Customer-First Multi-Page)
+   Brand Palette (from Artboard 9):
+     Yellow: #FFE67B | Sky Blue: #6EBAFF | Plum: #605193 | Pink: #FF80BD
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Official Brand Colors (Artboard 9) */
+  --kiida-yellow: #FFE67B;
+  --kiida-blue: #6EBAFF;
+  --kiida-plum: #605193;
+  --kiida-pink: #FF80BD;
+
+  /* Soft & Heartwarming Surface Tokens */
+  --bg-cream: #FDFBF5;
+  --bg-oat: #FAF3E3;
+  --bg-lilac: #D4C1E3;
+  --bg-lilac-soft: #F3ECF9;
+  --bg-blush-soft: #FFF0F7;
+  --bg-sky-soft: #EDF6FF;
+  --bg-sun-soft: #FFF9DB;
+  --bg-mint-soft: #EAF8F2;
+  --surface-white: #FFFFFF;
+
+  /* Accessible Text & UI Boundary Tokens (WCAG 1.4.3 >= 4.5:1 & 1.4.11 >= 3:1) */
+  --text-ink: #2A2046;
+  --text-plum: #4A3C78;
+  --text-muted: #5A4D85;
+  --border-soft: #C7B6DC;
+  --border-strong: #7663A8;
+  --accent-green-ink: #175941;
+  --accent-amber-ink: #6E470B;
+  --accent-pink-ink: #7A1E4D;
+  --accent-blue-ink: #164878;
+  --error-ink: #B31B1B;
+  --error-bg: #FDECEC;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-rounded: "Fredoka", "Nunito", system-ui, -apple-system, sans-serif;
+  --font-body: "Nunito", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* Layout & Radii */
+  --container-max: 76rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 1.75rem;
+  --radius-xl: 2.25rem;
+  --radius-pill: 999px;
+
+  /* Soft Elevations */
+  --shadow-soft: 0 12px 32px -8px rgb(96 81 147 / 0.12), 0 4px 12px -2px rgb(96 81 147 / 0.07);
+  --shadow-card: 0 16px 40px -12px rgb(96 81 147 / 0.16), 0 2px 8px rgb(96 81 147 / 0.06);
+  --shadow-float: 0 24px 48px -12px rgb(58 45 102 / 0.22);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  font-family: var(--font-body);
+  color: var(--text-ink);
+  background-color: var(--bg-cream);
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-cream);
+  color: var(--text-ink);
+  accent-color: var(--kiida-plum);
+  overflow-x: clip;
+}
+
+html[lang="en"] [data-lang="id"],
+html[lang="id"] [data-lang="en"] {
+  display: none !important;
+}
+
+[id] {
+  scroll-margin-block-start: 5.25rem;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  display: block;
+}
+
+a {
+  color: var(--kiida-plum);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.is-ready a {
+    transition: color 0.18s ease, background-color 0.18s ease;
+  }
+}
+
+a:hover {
+  color: var(--text-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--kiida-plum);
+  outline-offset: 3px;
+  border-radius: 0.375rem;
+}
+
+/* Canonical visually-hidden utility (modern-web-guidance) */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link {
+  position: absolute;
+  inset-block-start: -999px;
+  inset-inline-start: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: var(--kiida-plum);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  inset-block-start: 1rem;
+}
+
+.container {
+  inline-size: min(var(--container-max), calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   1. Sticky Responsive Site Header (modern-web-guidance: navbar)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 100;
+  background: rgb(253 251 245 / 0.93);
+  backdrop-filter: blur(14px);
+  border-block-end: 1.5px solid var(--border-soft);
+}
+
+.site-header.is-measuring * {
+  transition: none !important;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-block-size: 4.5rem;
+  padding-block: 0.45rem;
+}
+
+.header-inner > * {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.site-logo img {
+  block-size: 2.4rem;
+  inline-size: auto;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .menu-button {
+  anchor-name: --menu-button;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--kiida-plum);
+  background: var(--surface-white);
+  color: var(--kiida-plum);
+  font-family: var(--font-rounded);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.site-header .menu-button:hover {
+  background: var(--bg-lilac-soft);
+}
+
+.site-header .site-menu {
+  position: fixed;
+  inset: auto;
+  inset-block-start: 4.75rem;
+  inset-block-start: anchor(--menu-button bottom);
+  inset-inline-end: 1rem;
+  inline-size: min(85dvw, 22rem);
+  max-inline-size: calc(100dvw - 2rem);
+  block-size: fit-content;
+  max-block-size: calc(100dvh - 6rem);
+  margin-block-start: 0.5rem;
+  padding: 0.85rem;
+  list-style: none;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-strong);
+  background: var(--surface-white);
+  box-shadow: var(--shadow-float);
+  overflow: auto;
+  transition:
+    opacity 0.18s ease-out,
+    translate 0.18s ease-out,
+    display 0.18s,
+    overlay 0.18s;
+  transition-behavior: allow-discrete;
+}
+
+.site-header .site-menu[popover]:is(:popover-open, .\:popover-open) {
+  display: grid;
+  gap: 0.35rem;
+  opacity: 1;
+  translate: 0 0;
+}
+
+@starting-style {
+  .site-header .site-menu[popover]:is(:popover-open, .\:popover-open) {
+    opacity: 0;
+    translate: 0 -0.35rem;
+  }
+}
+
+.site-menu li {
+  margin: 0;
+}
+
+.site-menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  inline-size: 100%;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-ink);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.site-menu a:hover {
+  background: var(--bg-lilac-soft);
+  color: var(--kiida-plum);
+}
+
+/* Current section/page indicator uses both color and underline border shape (WCAG 1.4.1) */
+.site-menu a:is([aria-current="page"], [aria-current="location"], [aria-current="true"]) {
+  color: var(--kiida-plum);
+  background: var(--bg-lilac-soft);
+}
+
+.site-menu a:is([aria-current="page"], [aria-current="location"], [aria-current="true"])::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.65rem;
+  inset-block-end: 0.18rem;
+  border-block-end: 3px solid var(--kiida-plum);
+  border-radius: 2px;
+}
+
+.lang-switch-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-strong);
+  background: var(--bg-cream);
+  color: var(--text-ink);
+  font-family: var(--font-rounded);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lang-switch-link:hover {
+  background: var(--bg-lilac-soft);
+  color: var(--kiida-plum);
+}
+
+html[lang="en"] [data-lang-pill="en"],
+html[lang="id"] [data-lang-pill="id"],
+.lang-pill.is-active {
+  color: var(--kiida-plum);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.lang-sep {
+  color: var(--text-muted);
+}
+
+.site-menu .nav-cta-link {
+  background: var(--kiida-plum);
+  color: #FFFFFF !important;
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1rem !important;
+  justify-content: center;
+  border: 2px solid var(--kiida-plum);
+}
+
+.site-menu .nav-cta-link:hover,
+.site-menu .nav-cta-link:is([aria-current="page"], [aria-current="location"], [aria-current="true"]) {
+  background: var(--text-ink);
+  border-color: var(--text-ink);
+  color: #FFFFFF !important;
+}
+
+.site-menu .nav-cta-link:is([aria-current="page"], [aria-current="location"], [aria-current="true"])::after {
+  border-block-end-color: var(--kiida-yellow);
+}
+
+/* Wide layout: inline navigation */
+.site-header.is-wide .menu-button {
+  display: none;
+}
+
+.site-header.is-wide .site-menu {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  inline-size: auto;
+  max-inline-size: none;
+  block-size: auto;
+  max-block-size: none;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-header.is-wide .site-menu::backdrop {
+  display: none;
+}
+
+.site-header.is-wide .site-menu a {
+  inline-size: auto;
+  padding: 0.42rem 0.62rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. Warm Typography, Buttons & Pills
+   ========================================================================== */
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-white);
+  border: 1.5px solid var(--border-strong);
+  color: var(--kiida-plum);
+  font-family: var(--font-rounded);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgb(96 81 147 / 0.07);
+}
+
+.eyebrow-dot {
+  inline-size: 0.55rem;
+  block-size: 0.55rem;
+  border-radius: 50%;
+  background: var(--kiida-pink);
+  border: 1.5px solid var(--accent-pink-ink);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.4vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-ink);
+  margin-block: 0.65rem 0.9rem;
+  letter-spacing: -0.015em;
+}
+
+.section-heading em {
+  font-style: italic;
+  color: var(--kiida-plum);
+}
+
+.section-lead {
+  font-size: clamp(1.04rem, 1.35vw, 1.18rem);
+  color: var(--text-plum);
+  max-inline-size: 64ch;
+  margin-block: 0;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.45rem;
+  min-block-size: 3rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-rounded);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.is-ready .btn {
+    transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn-primary {
+  background: var(--kiida-plum);
+  background-color: var(--kiida-plum);
+  color: #FFFFFF;
+  border-color: var(--kiida-plum);
+  box-shadow: 0 8px 20px -4px rgb(96 81 147 / 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--text-ink);
+  background-color: var(--text-ink);
+  border-color: var(--text-ink);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background: var(--surface-white);
+  background-color: var(--surface-white);
+  color: var(--kiida-plum);
+  border-color: var(--kiida-plum);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-lilac-soft);
+  background-color: var(--bg-lilac-soft);
+  color: var(--text-ink);
+}
+
+/* ==========================================================================
+   3. Hero Sections (Home Hero & Inner Page Hero)
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  padding-block: clamp(2.5rem, 5vw, 4.25rem);
+  background:
+    radial-gradient(circle at 12% 18%, rgb(212 193 227 / 0.55), transparent 45%),
+    radial-gradient(circle at 88% 22%, rgb(255 230 123 / 0.38), transparent 42%),
+    radial-gradient(circle at 75% 85%, rgb(255 128 189 / 0.22), transparent 45%),
+    linear-gradient(135deg, var(--bg-lilac-soft) 0%, var(--bg-cream) 58%, var(--bg-oat) 100%);
+  border-block-end: 1.5px solid var(--border-soft);
+}
+
+.page-hero {
+  padding-block: clamp(2.25rem, 4.5vw, 3.5rem);
+  background:
+    radial-gradient(circle at 85% 20%, rgb(255 230 123 / 0.32), transparent 45%),
+    linear-gradient(135deg, var(--bg-lilac-soft) 0%, var(--bg-cream) 100%);
+  border-block-end: 1.5px solid var(--border-soft);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 62rem) {
+  .hero-grid {
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 3rem;
+  }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.3vw, 3.65rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-ink);
+  margin-block: 0.75rem 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--kiida-plum);
+}
+
+.hero-description {
+  font-size: clamp(1.06rem, 1.4vw, 1.2rem);
+  color: var(--text-plum);
+  margin-block: 0 1.65rem;
+  max-inline-size: 56ch;
+}
+
+.hero-note {
+  margin-block-start: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.hero-visual-stage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.2rem;
+  background: var(--bg-lilac);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.hero-visual-card {
+  background: var(--bg-cream);
+  border-radius: var(--radius-lg);
+  padding: 0.7rem;
+  border: 1.5px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-visual-card img {
+  border-radius: calc(var(--radius-lg) - 0.35rem);
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.hero-visual-caption {
+  margin-block-start: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-ink);
+  text-align: center;
+}
+
+/* ==========================================================================
+   4. Section Layouts, Cards, Quotes & Feature Splits
+   ========================================================================== */
+
+.section {
+  padding-block: clamp(3.25rem, 5.5vw, 5rem);
+}
+
+.section-lilac {
+  background: linear-gradient(180deg, var(--bg-lilac-soft) 0%, #E9DCF5 100%);
+  border-block: 1.5px solid var(--border-soft);
+}
+
+.section-oat {
+  background: var(--bg-oat);
+  border-block: 1.5px solid var(--border-soft);
+}
+
+.section-header {
+  margin-block-end: 2.25rem;
+}
+
+.section-header.is-centered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 1.5rem;
+}
+
+.cards-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+}
+
+.warm-card {
+  background: var(--surface-white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border: 2px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.warm-card.is-pink {
+  border-block-start: 6px solid var(--kiida-pink);
+}
+
+.warm-card.is-yellow {
+  border-block-start: 6px solid var(--kiida-yellow);
+}
+
+.warm-card.is-blue {
+  border-block-start: 6px solid var(--kiida-blue);
+}
+
+.warm-card.is-plum {
+  border-block-start: 6px solid var(--kiida-plum);
+}
+
+.warm-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--text-ink);
+}
+
+.warm-card p {
+  margin: 0;
+  color: var(--text-plum);
+}
+
+.quote-card {
+  background: var(--surface-white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 2px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.quote-card blockquote {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-ink);
+}
+
+.quote-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-plum);
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  align-self: flex-start;
+  padding: 0.28rem 0.8rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-rounded);
+  font-size: 0.84rem;
+  font-weight: 700;
+  background: var(--bg-lilac-soft);
+  color: var(--kiida-plum);
+  border: 1.5px solid var(--border-strong);
+}
+
+.feature-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  align-items: center;
+  background: var(--surface-white);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  border: 2px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 56rem) {
+  .feature-split {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .feature-split.is-reversed {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+.feature-split + .feature-split {
+  margin-block-start: 2rem;
+}
+
+.feature-visual-frame {
+  background: var(--bg-oat);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem;
+  border: 1.5px solid var(--border-soft);
+  text-align: center;
+}
+
+.feature-visual-frame img {
+  max-block-size: 24rem;
+  margin-inline: auto;
+  border-radius: var(--radius-md);
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--text-ink);
+  font-size: 0.96rem;
+}
+
+.check-icon {
+  flex-shrink: 0;
+  inline-size: 1.4rem;
+  block-size: 1.4rem;
+  border-radius: 50%;
+  background: var(--bg-mint-soft);
+  color: var(--accent-green-ink);
+  border: 1.5px solid var(--accent-green-ink);
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-block-start: 0.15rem;
+}
+
+.promise-banner {
+  margin-block-start: 1.5rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-lilac-soft);
+  border: 2px solid var(--kiida-plum);
+  color: var(--text-ink);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   5. Accordion Component (modern-web-guidance: accordion)
+   ========================================================================== */
+
+.accordion-group {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.accordion-group details {
+  background: var(--surface-white);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-soft);
+  box-shadow: 0 4px 12px rgb(96 81 147 / 0.06);
+  overflow: clip;
+}
+
+.accordion-group details[open] {
+  border-color: var(--kiida-plum);
+}
+
+.accordion-group summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75ch;
+  padding: 1.1rem 1.35rem;
+  font-family: var(--font-rounded);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-ink);
+  cursor: pointer;
+}
+
+.accordion-group summary::before {
+  content: "";
+  inline-size: 1.1em;
+  block-size: 1.1em;
+  flex-shrink: 0;
+  background-color: var(--kiida-plum);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat center / contain;
+  rotate: -90deg;
+}
+
+.accordion-group summary:dir(rtl)::before {
+  rotate: 90deg;
+}
+
+.accordion-group details[open] > summary::before {
+  rotate: 0deg;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-group summary::before {
+    transition: rotate 0.2s;
+  }
+}
+
+.accordion-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-group summary:hover {
+  background: var(--bg-lilac-soft);
+}
+
+.accordion-group details::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
+}
+
+.accordion-group details:not([open])::details-content {
+  block-size: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-group details::details-content {
+    transition: block-size, content-visibility, display;
+    transition-duration: 0.28s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+}
+
+.accordion-body {
+  padding: 0 1.35rem 1.25rem 2.85rem;
+  color: var(--text-plum);
+}
+
+.accordion-body p {
+  margin: 0 0 0.65rem;
+}
+
+.accordion-body p:last-child {
+  margin-block-end: 0;
+}
+
+/* ==========================================================================
+   6. Accessible Forms & Validation (modern-web-guidance: forms, validate-input-after-interaction)
+   ========================================================================== */
+
+.form-card {
+  background: var(--surface-white);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-block-end: 1.35rem;
+}
+
+.field label {
+  font-family: var(--font-rounded);
+  font-weight: 600;
+  color: var(--text-ink);
+  font-size: 0.98rem;
+}
+
+.field .hint {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  inline-size: 100%;
+  font: inherit;
+  font-size: max(1rem, 1em);
+  padding: 0.75rem 1rem;
+  min-block-size: 48px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-strong);
+  background: var(--bg-cream);
+  color: var(--text-ink);
+}
+
+@media (pointer: coarse) {
+  .field input,
+  .field select,
+  .field textarea {
+    min-block-size: 52px;
+  }
+}
+
+.field textarea {
+  min-block-size: 7rem;
+  resize: vertical;
+}
+
+.error-msg {
+  display: none;
+  color: var(--error-ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-block-start: 0.25rem;
+}
+
+/* Only show error styles after user interaction (:user-invalid + fallback) */
+.field :is(input, select, textarea):is(:user-invalid, .user-invalid-fallback) {
+  border-color: var(--error-ink);
+  background-color: var(--error-bg);
+}
+
+.field :is(input, select, textarea):is(:user-invalid, .user-invalid-fallback) + .error-msg {
+  display: block;
+}
+
+.field :is(input, select, textarea):is(:user-valid, .user-valid-fallback) {
+  border-color: var(--accent-green-ink);
+}
+
+.form-status {
+  margin-block-start: 1rem;
+  padding: 0.9rem 1.15rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-mint-soft);
+  border: 1.5px solid var(--accent-green-ink);
+  color: var(--accent-green-ink);
+  font-weight: 700;
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   7. Pricing Table, Company Facts Table & Legal Prose
+   ========================================================================== */
+
+.table-wrapper {
+  overflow: auto;
+  max-inline-size: 100%;
+  container-type: inline-size;
+  background: var(--surface-white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.info-table {
+  inline-size: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.96rem;
+}
+
+.info-table th,
+.info-table td {
+  padding: 1rem 1.25rem;
+  border-block-end: 1px solid var(--border-soft);
+  text-align: start;
+  vertical-align: top;
+}
+
+.info-table thead th {
+  background: var(--kiida-plum);
+  color: #FFFFFF;
+  font-family: var(--font-rounded);
+  font-weight: 600;
+}
+
+.info-table tbody th {
+  background: var(--bg-cream);
+  font-family: var(--font-rounded);
+  font-weight: 600;
+  color: var(--text-ink);
+  min-inline-size: 12rem;
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 58rem) {
+  .legal-layout {
+    grid-template-columns: 17rem 1fr;
+  }
+}
+
+.legal-toc {
+  position: sticky;
+  inset-block-start: 5.5rem;
+  background: var(--surface-white);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  border: 2px solid var(--border-soft);
+}
+
+.legal-toc h2 {
+  font-family: var(--font-rounded);
+  font-size: 1rem;
+  margin-block: 0 0.75rem;
+}
+
+.legal-toc ol {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.legal-prose {
+  background: var(--surface-white);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  border: 2px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-block: 2rem 0.65rem;
+  color: var(--text-ink);
+}
+
+.legal-prose h2:first-of-type {
+  margin-block-start: 1rem;
+}
+
+/* ==========================================================================
+   8. Site Footer & Forced Colors Mode
+   ========================================================================== */
+
+.site-footer {
+  background: var(--text-ink);
+  color: #F6F2FB;
+  padding-block: 3.75rem 2.25rem;
+  border-block-start: 4px solid var(--kiida-plum);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  gap: 2.25rem;
+  padding-block-end: 2.25rem;
+  border-block-end: 1px solid rgb(255 255 255 / 0.18);
+}
+
+.site-footer a {
+  color: var(--kiida-yellow);
+}
+
+.site-footer a:hover {
+  color: #FFFFFF;
+}
+
+.footer-logo-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  background: var(--surface-white);
+  border-radius: var(--radius-md);
+  margin-block-end: 0.9rem;
+}
+
+.footer-logo-box img {
+  block-size: 2.15rem;
+  inline-size: auto;
+}
+
+.footer-tagline {
+  margin: 0 0 0.65rem;
+  color: #E5DCF5;
+  font-size: 0.92rem;
+}
+
+.footer-entity-line {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #D2C4EC;
+}
+
+.footer-heading {
+  font-family: var(--font-rounded);
+  font-size: 1.02rem;
+  margin-block: 0 0.75rem;
+  color: #FFFFFF;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.footer-address {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: #E5DCF5;
+  line-height: 1.55;
+}
+
+.footer-bottom {
+  padding-block-start: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.86rem;
+  color: #D7CBEB;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-link-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--kiida-yellow);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.footer-link-btn:hover {
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   9. Single-Page Interactive Form Tabs (modern-web-guidance: tabs)
+   ========================================================================== */
+
+.tabs-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: inline proximity;
+  scrollbar-width: none;
+  gap: 0.45rem;
+  padding-block-end: 0.65rem;
+  margin-block-end: 1.5rem;
+  border-block-end: 1.5px solid var(--border-soft);
+}
+
+.tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-bar [role="tab"] {
+  flex: none;
+  scroll-snap-align: start;
+  position: relative;
+  appearance: none;
+  border: 1.5px solid var(--border-soft);
+  background: var(--bg-cream);
+  background-color: var(--bg-cream);
+  color: var(--text-plum);
+  border-radius: var(--radius-pill);
+  padding: 0.6rem 1.1rem;
+  min-block-size: 2.75rem;
+  font-family: var(--font-rounded);
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.is-ready .tabs-bar [role="tab"] {
+    transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+  }
+}
+
+.tabs-bar [role="tab"]:hover {
+  background: var(--bg-lilac-soft);
+  background-color: var(--bg-lilac-soft);
+  color: var(--kiida-plum);
+}
+
+.tabs-bar [role="tab"][aria-selected="true"] {
+  background: var(--bg-lilac-soft);
+  background-color: var(--bg-lilac-soft);
+  border-color: var(--kiida-plum);
+  color: var(--kiida-plum);
+}
+
+.tabs-bar [role="tab"][aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.95rem;
+  inset-block-end: 0.2rem;
+  border-block-end: 3px solid var(--kiida-plum);
+  border-radius: 2px;
+}
+
+/* Keep padding/borders on inner child so [hidden="until-found"] panels collapse cleanly */
+[role="tabpanel"] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* ==========================================================================
+   10. Native Modal Dialogs for Privacy Policy & Terms of Service
+   ========================================================================== */
+
+dialog.legal-dialog:modal {
+  overscroll-behavior: contain;
+  margin: auto;
+  padding: 0;
+  inline-size: min(58rem, calc(100dvw - 2rem));
+  max-block-size: calc(100dvh - 3rem);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--border-strong);
+  background: var(--surface-white);
+  color: var(--text-ink);
+  box-shadow: var(--shadow-float);
+}
+
+dialog.legal-dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgb(42 32 70 / 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-shell {
+  display: flex;
+  flex-direction: column;
+  max-block-size: calc(100dvh - 3.25rem);
+}
+
+.dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 1.65rem;
+  background: var(--bg-lilac-soft);
+  border-block-end: 1.5px solid var(--border-soft);
+}
+
+.dialog-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.2;
+  margin: 0.25rem 0 0;
+  color: var(--text-ink);
+}
+
+.dialog-close-form {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.dialog-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 2.75rem;
+  min-block-size: 2.75rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--kiida-plum);
+  background: var(--surface-white);
+  color: var(--kiida-plum);
+  font-family: var(--font-rounded);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dialog-close-btn:hover {
+  background: var(--kiida-plum);
+  color: #FFFFFF;
+}
+
+.dialog-body {
+  padding: 1.5rem 1.65rem 2rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.dialog-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-block: 1.5rem 0.5rem;
+  color: var(--text-ink);
+}
+
+.dialog-body h3:first-of-type {
+  margin-block-start: 1rem;
+}
+
+.dialog-body ul {
+  padding-inline-start: 1.35rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (forced-colors: active) {
+  .btn,
+  .warm-card,
+  .quote-card,
+  .feature-split,
+  .form-card,
+  .accordion-group details,
+  dialog.legal-dialog {
+    border: 2px solid CanvasText;
+  }
+
+  .site-menu a:is([aria-current="page"], [aria-current="location"], [aria-current="true"])::after,
+  .tabs-bar [role="tab"][aria-selected="true"]::after {
+    border-block-end-color: Highlight;
+  }
+}

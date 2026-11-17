@@ -1,0 +1,371 @@
+          <div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Get in Touch &amp; Early Access</span>
+            </span>
+            <h2 class="section-heading">
+              Join early access or <em>talk with our team in Jakarta.</em>
+            </h2>
+            <p class="section-lead">
+              Whether you’re a parent waiting for our iOS &amp; Android launch, a school or clinic ready to partner, or
+              simply have a question—our team replies within 1–2 working days.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-pink">
+              <h3>Families &amp; Support</h3>
+              <p>Questions about the KIIDA app, early access, or your child’s Growth Diary.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>General:</strong> <a href="mailto:{{site.email.hello}}">{{site.email.hello}}</a><br />
+                <strong>Support:</strong> <a href="mailto:{{site.email.support}}">{{site.email.support}}</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <h3>Schools, Studios &amp; Clinics</h3>
+              <p>Interested in onboarding your teachers or listing your classes and consultations on KIIDA.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Partnerships:</strong> <a href="mailto:{{site.email.partners}}">{{site.email.partners}}</a><br />
+                <strong>WhatsApp:</strong> <a href="{{site.whatsappHref}}">{{site.whatsappDisplay}}</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <h3>Jakarta Head Office</h3>
+              <p>
+                <strong>{{site.legalName}}</strong><br />
+                {{site.address.fullEn}}
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Phone:</strong> <a href="tel:{{site.phoneHref}}">{{site.phoneDisplay}}</a><br />
+                <strong>Hours:</strong> {{site.hours.en}}<br />
+                <a href="{{site.address.mapsUrl}}" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+              </p>
+            </article>
+          </div>
+
+          <div class="form-card tabs-container">
+            <div role="tablist" class="tabs-bar" aria-label="Choose inquiry form">
+              <button
+                type="button"
+                role="tab"
+                id="en-tab-ea"
+                data-tab-key="early-access"
+                aria-selected="true"
+                tabindex="0"
+              >
+                Join Early Access
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="en-tab-partner"
+                data-tab-key="partner"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Partner Inquiry (Schools &amp; Clinics)
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="en-tab-msg"
+                data-tab-key="message"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                General Message
+              </button>
+            </div>
+
+            <!-- Panel 1: Early Access -->
+            <div role="tabpanel" aria-labelledby="en-tab-ea">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Join the Early Access List
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Tell us your role and we’ll invite you as soon as KIIDA opens on iOS &amp; Android.
+                </p>
+
+                <form
+                  action="mailto:{{site.email.hello}}"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="{{site.email.hello}}"
+                  data-subject="KIIDA Early Access Request"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-ea-name">Your full name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-ea-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        enterkeyhint="next"
+                        data-error="en-ea-name-error"
+                      />
+                      <div id="en-ea-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter your name.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-ea-email">Email address <span aria-hidden="true">*</span></label>
+                      <span id="en-ea-email-hint" class="hint">Format: you@example.com</span>
+                      <input
+                        type="email"
+                        id="en-ea-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        enterkeyhint="next"
+                        aria-describedby="en-ea-email-hint"
+                        data-error="en-ea-email-error"
+                      />
+                      <div id="en-ea-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Enter an email address in the format you@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-ea-role">I am joining as a <span aria-hidden="true">*</span></label>
+                    <select id="en-ea-role" name="role" required data-error="en-ea-role-error">
+                      <option value="">Select one…</option>
+                      <option value="Parent">Parent or guardian</option>
+                      <option value="Teacher">Preschool or early-childhood teacher</option>
+                      <option value="Learning Center">Learning center or sensory studio</option>
+                      <option value="Medical Clinic">Pediatric or therapy clinic</option>
+                    </select>
+                    <div id="en-ea-role-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please select how you plan to use KIIDA.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Request Early Access</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Thank you! Your early access request is ready—if your email app opened, press send or email us
+                    anytime at {{site.email.hello}}.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 2: Partner Inquiry -->
+            <div role="tabpanel" aria-labelledby="en-tab-partner" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Partner Inquiry Form
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Our partnerships team at <strong>{{site.email.partners}}</strong> replies within 1–2 working days.
+                </p>
+
+                <form
+                  action="mailto:{{site.email.partners}}"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="{{site.email.partners}}"
+                  data-subject="KIIDA Partner Application"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-pt-org">School, studio, or clinic name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-pt-org"
+                        name="organization"
+                        required
+                        autocomplete="organization"
+                        data-error="en-pt-org-error"
+                      />
+                      <div id="en-pt-org-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter your organization name.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-pt-name">Contact person <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-pt-name"
+                        name="contact_name"
+                        required
+                        autocomplete="name"
+                        data-error="en-pt-name-error"
+                      />
+                      <div id="en-pt-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter a contact name.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-pt-email">Work email <span aria-hidden="true">*</span></label>
+                      <span id="en-pt-email-hint" class="hint">Format: name@school.id</span>
+                      <input
+                        type="email"
+                        id="en-pt-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="en-pt-email-hint"
+                        data-error="en-pt-email-error"
+                      />
+                      <div id="en-pt-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Enter an email address in the format name@school.id.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-pt-phone">Phone / WhatsApp number <span aria-hidden="true">*</span></label>
+                      <input
+                        type="tel"
+                        id="en-pt-phone"
+                        name="phone"
+                        required
+                        autocomplete="tel"
+                        data-error="en-pt-phone-error"
+                      />
+                      <div id="en-pt-phone-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter a phone or WhatsApp number.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-pt-type">Program category <span aria-hidden="true">*</span></label>
+                    <select id="en-pt-type" name="category" required data-error="en-pt-type-error">
+                      <option value="">Select category…</option>
+                      <option value="Preschool / Kindergarten">Preschool or Kindergarten</option>
+                      <option value="Sensory Play / Art / Music Studio">Sensory Play, Art, or Music Studio</option>
+                      <option value="Speech / Occupational Therapy Clinic">Speech or Occupational Therapy Clinic</option>
+                      <option value="Pediatric / Developmental Clinic">Pediatric or Child Development Clinic</option>
+                      <option value="Educational Goods / Toys Brand">Developmental Toys &amp; Goods Partner</option>
+                    </select>
+                    <div id="en-pt-type-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please choose your primary category.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-pt-notes">Tell us about your programs &amp; city</label>
+                    <textarea id="en-pt-notes" name="notes" rows="3"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Send Partner Inquiry</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Thank you! Your inquiry is ready to send to {{site.email.partners}}.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 3: General Message -->
+            <div role="tabpanel" aria-labelledby="en-tab-msg" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Send Us a Message
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Fill out the form below and our team in Jakarta will get back to you within 1–2 working days.
+                </p>
+
+                <form
+                  action="mailto:{{site.email.hello}}"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="{{site.email.hello}}"
+                  data-subject="KIIDA Website Contact Message"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-ct-name">Your full name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-ct-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        data-error="en-ct-name-error"
+                      />
+                      <div id="en-ct-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter your name.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-ct-email">Email address <span aria-hidden="true">*</span></label>
+                      <span id="en-ct-email-hint" class="hint">Format: you@example.com</span>
+                      <input
+                        type="email"
+                        id="en-ct-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="en-ct-email-hint"
+                        data-error="en-ct-email-error"
+                      />
+                      <div id="en-ct-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Enter an email address in the format you@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-ct-topic">Topic <span aria-hidden="true">*</span></label>
+                    <select id="en-ct-topic" name="topic" required data-error="en-ct-topic-error">
+                      <option value="">Choose a topic…</option>
+                      <option value="Family / Early Access">Parent or family inquiry</option>
+                      <option value="School / Teacher">Preschool or teacher onboarding</option>
+                      <option value="Learning Center / Clinic Partnership">Learning center or clinic partnership</option>
+                      <option value="Privacy / Data Request">Privacy or data request</option>
+                      <option value="General Inquiry">General question</option>
+                    </select>
+                    <div id="en-ct-topic-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please choose a topic.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-ct-message">Message <span aria-hidden="true">*</span></label>
+                    <textarea
+                      id="en-ct-message"
+                      name="message"
+                      rows="4"
+                      required
+                      data-error="en-ct-message-error"
+                    ></textarea>
+                    <div id="en-ct-message-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please enter your message.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Thank you! Your message is ready to send—we will reply within 1–2 working days.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    try {
+      var q = new URLSearchParams(window.location.search).get("lang");
+      var saved = window.localStorage.getItem("kiida_lang");
+      if (q === "id" || (q !== "en" && saved === "id")) {
+        document.documentElement.lang = "id";
+      }
+    } catch (e) {}
+  </script>
+  <title>{{site.singlePage.en.title}}</title>
+  <meta name="description" content="{{site.singlePage.en.description}}" />
+  <meta name="theme-color" content="#605193" />
+
+  <link rel="canonical" href="{{site.url}}/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KIIDA" />
+  <meta property="og:title" content="{{site.singlePage.en.title}}" />
+  <meta property="og:description" content="{{site.singlePage.en.description}}" />
+  <meta property="og:url" content="{{site.url}}/" />
+  <meta property="og:image" content="{{site.url}}/assets/web/illustration-milestones-kids.png" />
+
+  <link rel="icon" type="image/png" href="assets/PNG/Artboard%208%20-%20PNG.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,400..600&amp;family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{site.brand}}",
+    "legalName": "{{site.legalName}}",
+    "url": "{{site.url}}",
+    "logo": "{{site.url}}/assets/web/kiida-logo-horizontal.png",
+    "foundingDate": "{{site.founded}}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{site.address.line1}}, {{site.address.line2}}",
+      "addressLocality": "{{site.address.city}}",
+      "addressRegion": "{{site.address.region}}",
+      "postalCode": "{{site.address.postal}}",
+      "addressCountry": "ID"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "{{site.phoneDisplay}}",
+        "email": "{{site.email.hello}}",
+        "contactType": "customer service",
+        "areaServed": "ID",
+        "availableLanguage": ["English", "Indonesian"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body
+  data-form-endpoint="{{site.formEndpoint}}"
+  data-default-email="{{site.email.hello}}"
+  data-title-en="{{site.singlePage.en.title}}"
+  data-title-id="{{site.singlePage.id.title}}"
+  data-desc-en="{{site.singlePage.en.description}}"
+  data-desc-id="{{site.singlePage.id.description}}"
+>
+  <a class="skip-link" href="#main-content">
+    <span data-lang="en">Skip to main content</span>
+    <span data-lang="id">Lewati ke konten utama</span>
+  </a>

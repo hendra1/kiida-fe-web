@@ -1,0 +1,3463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    try {
+      var q = new URLSearchParams(window.location.search).get("lang");
+      var saved = window.localStorage.getItem("kiida_lang");
+      if (q === "id" || (q !== "en" && saved === "id")) {
+        document.documentElement.lang = "id";
+      }
+    } catch (e) {}
+  </script>
+  <title>KIIDA — Every Little Moment, Gently Understood</title>
+  <meta name="description" content="KIIDA turns everyday photos and videos into a warm, clear picture of your child's growth—connecting parents, teachers, learning centers, and pediatric clinics across Indonesia." />
+  <meta name="theme-color" content="#605193" />
+
+  <link rel="canonical" href="https://kiida.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KIIDA" />
+  <meta property="og:title" content="KIIDA — Every Little Moment, Gently Understood" />
+  <meta property="og:description" content="KIIDA turns everyday photos and videos into a warm, clear picture of your child's growth—connecting parents, teachers, learning centers, and pediatric clinics across Indonesia." />
+  <meta property="og:url" content="https://kiida.app/" />
+  <meta property="og:image" content="https://kiida.app/assets/web/illustration-milestones-kids.png" />
+
+  <link rel="icon" type="image/png" href="assets/PNG/Artboard%208%20-%20PNG.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,400..600&amp;family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KIIDA",
+    "legalName": "PT Kiida Tumbuh Bersama",
+    "url": "https://kiida.app",
+    "logo": "https://kiida.app/assets/web/kiida-logo-horizontal.png",
+    "foundingDate": "2025",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "District 8, Prosperity Tower Lt. 18, Jl. Jend. Sudirman Kav. 52-53, SCBD Lot 28",
+      "addressLocality": "Jakarta Selatan",
+      "addressRegion": "DKI Jakarta",
+      "postalCode": "12190",
+      "addressCountry": "ID"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+62 21 5088 9900",
+        "email": "hello@kiida.app",
+        "contactType": "customer service",
+        "areaServed": "ID",
+        "availableLanguage": ["English", "Indonesian"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body
+  data-form-endpoint=""
+  data-default-email="hello@kiida.app"
+  data-title-en="KIIDA — Every Little Moment, Gently Understood"
+  data-title-id="KIIDA — Setiap Momen Kecil, Dipahami dengan Hangat"
+  data-desc-en="KIIDA turns everyday photos and videos into a warm, clear picture of your child's growth—connecting parents, teachers, learning centers, and pediatric clinics across Indonesia."
+  data-desc-id="KIIDA mengubah foto dan video keseharian anak menjadi gambaran tumbuh kembang yang hangat dan jelas—menghubungkan orang tua, guru, pusat belajar, dan klinik anak."
+>
+  <a class="skip-link" href="#main-content">
+    <span data-lang="en">Skip to main content</span>
+    <span data-lang="id">Lewati ke konten utama</span>
+  </a>
+
+  <header class="site-header is-wide">
+    <div class="container header-inner">
+      <a class="site-logo" href="#home" aria-label="KIIDA">
+        <img src="assets/web/kiida-logo-horizontal.png" alt="KIIDA" width="128" height="40" />
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button
+          class="menu-button"
+          type="button"
+          popovertarget="site-menu"
+          popovertargetaction="toggle"
+          aria-controls="site-menu"
+        >
+          <span aria-hidden="true">☰</span>
+          <span>Menu</span>
+        </button>
+
+        <ul id="site-menu" class="site-menu" popover="auto">
+          <li>
+            <a href="#home" aria-current="location">
+              <span data-lang="en">Home</span>
+              <span data-lang="id">Beranda</span>
+            </a>
+          </li>
+          <li>
+            <a href="#parents">
+              <span data-lang="en">For Parents</span>
+              <span data-lang="id">Orang Tua</span>
+            </a>
+          </li>
+          <li>
+            <a href="#partners">
+              <span data-lang="en">Schools &amp; Clinics</span>
+              <span data-lang="id">Sekolah &amp; Klinik</span>
+            </a>
+          </li>
+          <li>
+            <a href="#pricing">
+              <span data-lang="en">Pricing</span>
+              <span data-lang="id">Harga</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <span data-lang="en">About</span>
+              <span data-lang="id">Tentang</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq">
+              <span data-lang="en">Help</span>
+              <span data-lang="id">Bantuan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span data-lang="en">Contact</span>
+              <span data-lang="id">Kontak</span>
+            </a>
+          </li>
+          <li class="lang-switch-item">
+            <button
+              type="button"
+              class="lang-switch-link"
+              data-lang-toggle
+              aria-pressed="false"
+              aria-label="Switch language to Bahasa Indonesia"
+            >
+              <span class="lang-pill" data-lang-pill="en">EN</span>
+              <span class="lang-sep" aria-hidden="true">/</span>
+              <span class="lang-pill" data-lang-pill="id">ID</span>
+            </button>
+          </li>
+          <li>
+            <a href="#contact" class="nav-cta-link" data-select-tab="early-access">
+              <span data-lang="en">Join early access</span>
+              <span data-lang="id">Akses Awal</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div data-lang="en">
+<div class="hero-grid">
+            <div>
+              <span class="eyebrow-pill">
+                <span class="eyebrow-dot" aria-hidden="true"></span>
+                <span>Parent’s Trusted Companion in Every Early Step</span>
+              </span>
+
+              <h1 class="hero-title">
+                Every little moment, <em>gently understood.</em>
+              </h1>
+
+              <p class="hero-description">
+                KIIDA turns the photos and videos you already take into a warm, clear picture of how your child is
+                growing—and helps you find the right sensory class, therapist, or developmental toy when you’re ready.
+              </p>
+
+              <div class="btn-group">
+                <a href="#contact" class="btn btn-primary" data-select-tab="early-access">Join early access</a>
+                <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
+              </div>
+
+              <p class="hero-note">Coming soon to iOS &amp; Android • Free for families &amp; teachers</p>
+            </div>
+
+            <div class="hero-visual-stage" aria-label="KIIDA Growth Diary and Milestone Preview">
+              <div class="hero-visual-card">
+                <img
+                  src="assets/web/hero-phone-sensory.png"
+                  alt="A toddler exploring a sensory bin with purple rice and feathers inside the KIIDA app feed"
+                  width="648"
+                  height="1070"
+                />
+                <div class="hero-visual-caption">Everyday moments from home &amp; school</div>
+              </div>
+
+              <div class="hero-visual-card">
+                <img
+                  src="assets/web/illustration-milestones-kids.png"
+                  alt="Children building colorful blocks together with gentle milestone progress indicators"
+                  width="1098"
+                  height="1214"
+                />
+                <div class="hero-visual-caption">Mapped gently to age-based milestones</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="hero-grid">
+            <div>
+              <span class="eyebrow-pill">
+                <span class="eyebrow-dot" aria-hidden="true"></span>
+                <span>Sahabat Terpercaya Orang Tua di Setiap Langkah Awal</span>
+              </span>
+
+              <h1 class="hero-title">
+                Setiap momen kecil, <em>dipahami dengan hangat.</em>
+              </h1>
+
+              <p class="hero-description">
+                KIIDA mengubah foto dan video keseharian yang Anda abadikan menjadi gambaran tumbuh kembang anak yang
+                hangat dan jelas—serta membantu Anda menemukan kelas sensorik, terapis, atau mainan stimulasi yang tepat saat Anda siap.
+              </p>
+
+              <div class="btn-group">
+                <a href="#contact" class="btn btn-primary" data-select-tab="early-access">Daftar akses awal</a>
+                <a href="#how-it-works" class="btn btn-secondary">Lihat cara kerjanya</a>
+              </div>
+
+              <p class="hero-note">Segera hadir di iOS &amp; Android • Gratis untuk keluarga &amp; guru</p>
+            </div>
+
+            <div class="hero-visual-stage" aria-label="Pratinjau Growth Diary dan Tahapan Tumbuh Kembang KIIDA">
+              <div class="hero-visual-card">
+                <img
+                  src="assets/web/hero-phone-sensory.png"
+                  alt="Batita sedang bereksplorasi di sensory bin dengan beras ungu dan bulu lembut di feed aplikasi KIIDA"
+                  width="648"
+                  height="1070"
+                />
+                <div class="hero-visual-caption">Momen keseharian dari rumah &amp; sekolah</div>
+              </div>
+
+              <div class="hero-visual-card">
+                <img
+                  src="assets/web/illustration-milestones-kids.png"
+                  alt="Anak-anak menyusun balok warna-warni bersama dengan indikator perkembangan bertahap yang ramah"
+                  width="1098"
+                  height="1214"
+                />
+                <div class="hero-visual-caption">Terhubung secara lembut dengan tahapan usia anak</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sound-familiar" class="section">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header is-centered">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Sound familiar?</span>
+            </span>
+            <h2 class="section-heading">
+              Raising a young child comes with <em>quiet questions every day</em>
+            </h2>
+            <p class="section-lead">
+              Between camera rolls, school chat groups, and well-meaning advice, it is easy to feel overwhelmed.
+            </p>
+          </div>
+
+          <div class="cards-grid-3">
+            <article class="quote-card">
+              <blockquote>“Is this normal for her age—or should I ask our doctor?”</blockquote>
+              <p>
+                You have hundreds of cute videos on your phone, but when your pediatrician asks when a skill started,
+                it’s hard to piece the timeline together.
+              </p>
+            </article>
+
+            <article class="quote-card">
+              <blockquote>“What did he actually do at preschool today?”</blockquote>
+              <p>
+                Teachers care deeply, yet writing daily notes for every child takes hours away from the
+                classroom—leaving parents with only brief updates.
+              </p>
+            </article>
+
+            <article class="quote-card">
+              <blockquote>“Which sensory class or speech clinic is truly right for us?”</blockquote>
+              <p>
+                Searching across social media and messaging ten different centers just to check open slots and pricing
+                takes time you don’t have.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header is-centered">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Pernahkah Anda merasakannya?</span>
+            </span>
+            <h2 class="section-heading">
+              Membesarkan buah hati selalu hadir bersama <em>pertanyaan di setiap hari</em>
+            </h2>
+            <p class="section-lead">
+              Di antara tumpukan galeri ponsel, percakapan grup sekolah, dan beragam nasihat sekitar, wajar jika orang tua kerap merasa bimbang.
+            </p>
+          </div>
+
+          <div class="cards-grid-3">
+            <article class="quote-card">
+              <blockquote>“Apakah ini wajar untuk usianya—atau sebaiknya saya tanyakan ke dokter anak?”</blockquote>
+              <p>
+                Ada ratusan video menggemaskan di ponsel Anda, tetapi saat dokter anak menanyakan kapan suatu kemampuan
+                baru pertama kali muncul, sulit menyusun kembali garis waktunya.
+              </p>
+            </article>
+
+            <article class="quote-card">
+              <blockquote>“Apa saja sebenarnya yang ia lakukan di prasekolah hari ini?”</blockquote>
+              <p>
+                Guru sangat menyayangi anak-anak, namun menulis laporan harian untuk setiap murid memakan banyak waktu—sehingga
+                orang tua sering kali hanya menerima kabar singkat.
+              </p>
+            </article>
+
+            <article class="quote-card">
+              <blockquote>“Kelas sensorik atau klinik wicara mana yang benar-benar tepat untuk anak kami?”</blockquote>
+              <p>
+                Mencari di media sosial dan menghubungi puluhan tempat hanya demi mengecek jadwal yang tersedia serta biaya
+                memerlukan waktu yang tidak sedikit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="section section-lilac">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>How KIIDA Works</span>
+            </span>
+            <h2 class="section-heading">
+              Three gentle steps from <em>captured moment to confident next step</em>
+            </h2>
+            <p class="section-lead">
+              Designed to feel as natural as sharing a family photo—never like filling out medical paperwork.
+            </p>
+          </div>
+
+          <div class="cards-grid-3">
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Step 1 • Capture</span>
+              <h3>Save moments from home &amp; class</h3>
+              <p>
+                Post photos or short videos of your child playing, building, or trying something new. Your child’s
+                teacher can share classroom moments too, with the date and child organized automatically.
+              </p>
+            </article>
+
+            <article class="warm-card is-pink">
+              <span class="step-badge">Step 2 • Understand</span>
+              <h3>See steady patterns, not one-off guesses</h3>
+              <p>
+                KIIDA looks for consistent patterns across multiple uploads—paired with notes from your child’s teacher
+                or doctor—and maps them to age-based CDC developmental milestones.
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Step 3 • Find Support</span>
+              <h3>Explore classes, clinics &amp; toys on your terms</h3>
+              <p>
+                Whenever you want extra support or enrichment, browse sensory classes, pediatric clinics, and tested
+                learning toys with honest parent reviews and on-site evaluations from our team.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Cara Kerja KIIDA</span>
+            </span>
+            <h2 class="section-heading">
+              Tiga langkah lembut dari <em>momen yang diabadikan hingga langkah pasti berikutnya</em>
+            </h2>
+            <p class="section-lead">
+              Dirancang senatural berbagi foto keluarga—tanpa rasa rumit seperti mengisi lembar pemeriksaan medis.
+            </p>
+          </div>
+
+          <div class="cards-grid-3">
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Langkah 1 • Abadikan</span>
+              <h3>Simpan momen dari rumah &amp; kelas</h3>
+              <p>
+                Unggah foto atau video singkat saat buah hati bermain, menyusun balok, atau mencoba hal baru. Guru di
+                sekolah juga dapat berbagi momen kelas, dengan tanggal dan profil anak yang terorganisasi otomatis.
+              </p>
+            </article>
+
+            <article class="warm-card is-pink">
+              <span class="step-badge">Langkah 2 • Pahami</span>
+              <h3>Lihat pola yang konsisten, bukan tebakan sesaat</h3>
+              <p>
+                KIIDA membaca pola berkelanjutan dari berbagai momen yang diunggah—didukung catatan dari guru atau dokter
+                anak Anda—dan memetakannya ke tahapan tumbuh kembang CDC sesuai usia anak.
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Langkah 3 • Temukan Dukungan</span>
+              <h3>Jelajahi kelas, klinik &amp; mainan sesuai kebutuhan Anda</h3>
+              <p>
+                Kapan pun Anda membutuhkan pengayaan atau dukungan tumbuh kembang, temukan kelas sensorik, klinik anak,
+                dan mainan edukatif teruji dengan ulasan jujur orang tua serta evaluasi langsung dari tim kami.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="whats-inside" class="section">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>What’s Inside the App</span>
+            </span>
+            <h2 class="section-heading">
+              Everything your child’s early years need, <em>in one calm place</em>
+            </h2>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 3rem;">
+            <article class="warm-card">
+              <h3>📖 Personal Growth Diary</h3>
+              <p>
+                A private timeline of your child’s activities, teacher observations, and developmental progress that you
+                can revisit anytime.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>🌱 CDC Milestone Checklists</h3>
+              <p>
+                Age-by-age milestone checklists from 2 months to 5 years across social, language, cognitive, and
+                movement skills.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>🩺 Doctor-Visit Summary</h3>
+              <p>
+                Prepare for pediatric checkups with a clear snapshot of recent milestones, questions, and teacher notes
+                to share with your doctor.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>💬 Ask KIIDA (24/7 Chat)</h3>
+              <p>
+                Ask everyday parenting questions—from nap schedules to age-appropriate play ideas—and get warm,
+                practical answers anytime.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>🎨 Curated Discovery</h3>
+              <p>
+                Browse sensory play programs, music therapy, speech clinics, art studios, and developmental toys reviewed
+                both by parents and by KIIDA.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>📅 Shared Family Calendar</h3>
+              <p>
+                Keep confirmed class bookings, clinic appointments, and developmental check-ins organized in one family
+                schedule.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>One Connected Circle</span>
+            </span>
+            <h2 class="section-heading">
+              Built for everyone who helps <em>your child grow</em>
+            </h2>
+          </div>
+
+          <div class="cards-grid-3">
+            <article class="warm-card is-pink">
+              <h3>For Parents &amp; Families</h3>
+              <p>
+                Follow your child’s milestones without stress, stay connected to what happens in class, and book classes
+                or consultations in a few taps.
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <a href="#parents"><strong>Explore KIIDA for Parents →</strong></a>
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <h3>For Teachers &amp; Preschools</h3>
+              <p>
+                Spend less time typing daily reports and more time with the children. Upload class moments and let KIIDA
+                help draft thoughtful observation notes.
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <a href="#en-teachers"><strong>See how teachers use KIIDA →</strong></a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <h3>For Learning Centers &amp; Clinics</h3>
+              <p>
+                Reach parents who are looking for your exact program, publish live slot availability, and receive
+                automated booking payouts.
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <a href="#en-centers"><strong>Explore partner tools →</strong></a>
+              </p>
+            </article>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Fitur di Dalam Aplikasi</span>
+            </span>
+            <h2 class="section-heading">
+              Semua kebutuhan langkah awal buah hati, <em>dalam satu tempat yang menenangkan</em>
+            </h2>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 3rem;">
+            <article class="warm-card">
+              <h3>📖 Personal Growth Diary</h3>
+              <p>
+                Garis waktu pribadi berisi aktivitas buah hati, catatan observasi guru, dan perjalanan tumbuh kembang
+                yang dapat Anda buka kembali kapan saja.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>🌱 CDC Milestone Checklists</h3>
+              <p>
+                Daftar pantau tumbuh kembang dari usia 2 bulan hingga 5 tahun yang mencakup kemampuan sosial, bahasa,
+                kognitif, dan motorik anak.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>🩺 Doctor-Visit Summary</h3>
+              <p>
+                Persiapkan konsultasi ke dokter anak dengan rangkuman rapi berisi capaian terkini, catatan guru, dan
+                daftar pertanyaan yang ingin didiskusikan bersama dokter.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>💬 Ask KIIDA (Tanya Jawab 24/7)</h3>
+              <p>
+                Tanyakan pertanyaan sehari-hari seputar pengasuhan—mulai dari jadwal tidur hingga ide permainan stimulasi—dan
+                dapatkan jawaban yang hangat serta praktis setiap saat.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>🎨 Curated Discovery</h3>
+              <p>
+                Jelajahi program bermain sensori, terapi musik, klinik wicara, studio seni, dan mainan stimulasi yang
+                ditinjau bersama oleh sesama orang tua serta kurasi tim KIIDA.
+              </p>
+            </article>
+
+            <article class="warm-card">
+              <h3>📅 Shared Family Calendar</h3>
+              <p>
+                Kelola jadwal kelas yang sudah dipesan, janji temu klinik, dan agenda pemeriksaan tumbuh kembang dalam
+                satu kalender keluarga terpadu.
+              </p>
+            </article>
+          </div>
+
+          <div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Satu Lingkaran Kepedulian</span>
+            </span>
+            <h2 class="section-heading">
+              Dihadirkan bagi setiap sosok yang mendampingi <em>tumbuh kembang buah hati</em>
+            </h2>
+          </div>
+
+          <div class="cards-grid-3">
+            <article class="warm-card is-pink">
+              <h3>Untuk Orang Tua &amp; Keluarga</h3>
+              <p>
+                Pantau tahapan perkembangan anak tanpa rasa cemas, tetap terhubung dengan kegiatan di sekolah, dan pesan
+                kelas atau konsultasi hanya dalam beberapa sentuhan.
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <a href="#parents"><strong>Jelajahi KIIDA untuk Orang Tua →</strong></a>
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <h3>Untuk Guru &amp; Prasekolah</h3>
+              <p>
+                Kurangi waktu mengetik laporan harian dan luangkan lebih banyak waktu mendampingi murid. Unggah momen kelas
+                dan biarkan KIIDA membantu menyusun draf catatan observasi yang bermakna.
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <a href="#id-teachers"><strong>Lihat cara guru menggunakan KIIDA →</strong></a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <h3>Untuk Tempat Belajar &amp; Klinik</h3>
+              <p>
+                Jangkau orang tua yang sedang mencari program Anda, tampilkan jadwal sesi yang tersedia secara langsung,
+                dan terima pembayaran pemesanan secara otomatis.
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <a href="#id-centers"><strong>Jelajahi sarana mitra →</strong></a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="parents" class="section section-oat">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>KIIDA for Parents &amp; Families</span>
+            </span>
+            <h2 class="section-heading">
+              Follow your child’s growth <em>with warmth, not worry.</em>
+            </h2>
+            <p class="section-lead">
+              From first words and steady steps to sensory play at preschool, KIIDA connects everyday moments from home
+              and school with trusted local classes.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Monday • At Home</span>
+              <h3>You capture a quiet play moment</h3>
+              <p>
+                You upload a short clip of your 18-month-old stacking blocks in the living room. KIIDA automatically
+                saves the date and tags your child’s profile.
+              </p>
+            </article>
+
+            <article class="warm-card is-pink">
+              <span class="step-badge">Wednesday • At Preschool</span>
+              <h3>Your child’s teacher adds a class note</h3>
+              <p>
+                During sensory play, the teacher uploads a photo and adds an AI-assisted observation note confirming how
+                steadily your child stood and shared toys with classmates.
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Friday • Growth Diary</span>
+              <h3>Consistent evidence updates your checklist</h3>
+              <p>
+                After several consistent moments across the week, KIIDA highlights the matching 18-month CDC milestone so
+                you and your pediatrician have a clear, dated record.
+              </p>
+            </article>
+          </div>
+
+          <div class="feature-split">
+            <div>
+              <span class="eyebrow-pill">Growth Diary &amp; Checklists</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                A Growth Diary built on <em>CDC developmental milestones</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Track your child’s progress across Social &amp; Emotional, Language &amp; Communication, Cognitive, and
+                Movement milestones from 2 months through 5 years.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Multi-upload consistency:</strong> Milestones are confirmed only when patterns appear consistently across multiple uploads.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Teacher &amp; doctor context:</strong> Educators and clinicians can add observations alongside your home moments.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Well-Visit Snapshot:</strong> Bring a clean summary of milestones, height/weight notes, and questions to your next checkup.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Ask KIIDA 24/7:</strong> Have a late-night question about sleep schedules or play activities? Ask KIIDA anytime.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/mockup-growth-diary-3d.png"
+                alt="KIIDA Growth Diary mobile screen showing milestones and activity log"
+                width="1167"
+                height="1142"
+              />
+            </div>
+          </div>
+
+          <div class="feature-split is-reversed" style="margin-block-end: 2.75rem;">
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/mockup-discovery-platform-3d.png"
+                alt="KIIDA Discovery Platform mobile screen showing Sensory Play, Speech Clinic, Yoga & Movement, Music Therapy, and Art Studio"
+                width="1167"
+                height="1142"
+              />
+            </div>
+
+            <div>
+              <span class="eyebrow-pill">Discovery Platform</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Discover trusted classes, clinics &amp; <em>curated toys</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                When you want to explore a sensory class, music therapy, an art studio, or a speech consultation, KIIDA
+                makes browsing feel familiar and trustworthy.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Evaluated by KIIDA + fellow parents:</strong> Every listing pairs AI-summarized parent reviews with KIIDA’s own assessment from a site visit or product test.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Curated goods &amp; services:</strong> Shop tested developmental toys and book sensory play, occupational playgroups, speech clinics, and pediatric consultations.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Zero pressure:</strong> We never push recommendations based on your child’s developmental results—you browse and choose for your family.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="en-booking-flow">
+            <h3 class="section-heading" style="font-size: clamp(1.45rem, 2.2vw, 1.95rem); margin-block-end: 1.25rem;">
+              How booking a class or consultation <em>works in 4 simple steps</em>
+            </h3>
+            <div class="cards-grid-2">
+              <article class="warm-card is-yellow">
+                <span class="step-badge">1. Browse &amp; Pick a Slot</span>
+                <h3>See real open times right in the app</h3>
+                <p>
+                  Explore classes, schools, and clinics by category, read KIIDA’s site-visit notes, and choose an
+                  available session time that fits your family’s week.
+                </p>
+              </article>
+
+              <article class="warm-card is-pink">
+                <span class="step-badge">2. Hold Your Spot (1-Hour Window)</span>
+                <h3>Complete payment with gentle reminders</h3>
+                <p>
+                  Submit your short booking form and pay within 1 hour to lock your slot (flat IDR 5,000 service fee
+                  shown upfront), with friendly reminders every 24 hours up to D-1.
+                </p>
+              </article>
+
+              <article class="warm-card is-blue">
+                <span class="step-badge">3. Automatic Family Calendar Update</span>
+                <h3>Synced the moment payment confirms</h3>
+                <p>
+                  Once confirmed, the session appears on your KIIDA Family Calendar and the center’s remaining open slot
+                  count updates automatically.
+                </p>
+              </article>
+
+              <article class="warm-card is-plum">
+                <span class="step-badge">4. Protected Partner Settlement</span>
+                <h3>Peace of mind before session day</h3>
+                <p>
+                  KIIDA holds your booking payment securely and transfers funds to the learning center or clinic 24
+                  hours before your scheduled session.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="promise-banner">
+            💛 Free to start: Every family can upload up to 5 photos and 2 videos each week for free, with full access
+            to the Growth Diary, Ask KIIDA chat, and Discovery Platform.
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>KIIDA untuk Orang Tua &amp; Keluarga</span>
+            </span>
+            <h2 class="section-heading">
+              Pantau tumbuh kembang anak <em>dengan hangat, tanpa rasa cemas.</em>
+            </h2>
+            <p class="section-lead">
+              Mulai dari kata-kata pertama dan langkah awal yang mantap hingga bermain sensori di prasekolah, KIIDA
+              menghubungkan momen keseharian dari rumah dan sekolah dengan kelas lokal terpercaya.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Senin • Di Rumah</span>
+              <h3>Anda mengabadikan momen bermain yang tenang</h3>
+              <p>
+                Anda mengunggah video singkat saat buah hati yang berusia 18 bulan menyusun balok di ruang keluarga. KIIDA
+                menyimpan tanggal secara otomatis dan menandai profil anak Anda.
+              </p>
+            </article>
+
+            <article class="warm-card is-pink">
+              <span class="step-badge">Rabu • Di Prasekolah</span>
+              <h3>Guru menambahkan catatan observasi kelas</h3>
+              <p>
+                Saat sesi bermain sensori, guru mengunggah foto dan menyertakan catatan observasi berbantuan AI yang
+                menceritakan betapa mantapnya anak Anda berdiri dan berbagi mainan dengan teman sebayanya.
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Jumat • Growth Diary</span>
+              <h3>Pola yang konsisten memperbarui daftar pantau</h3>
+              <p>
+                Setelah beberapa momen konsisten tercatat sepanjang minggu, KIIDA menandai tahapan tumbuh kembang CDC 18
+                bulan yang sesuai, sehingga Anda dan dokter anak memiliki catatan tertanggal yang jelas.
+              </p>
+            </article>
+          </div>
+
+          <div class="feature-split">
+            <div>
+              <span class="eyebrow-pill">Growth Diary &amp; Daftar Pantau</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Growth Diary yang berpedoman pada <em>tahapan tumbuh kembang CDC</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Pantau perkembangan buah hati Anda pada aspek Sosial &amp; Emosional, Bahasa &amp; Komunikasi, Kognitif,
+                serta Gerak/Motorik dari usia 2 bulan hingga 5 tahun.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Konsistensi multi-unggahan:</strong> Tahapan perkembangan hanya dikonfirmasi saat pola tampak konsisten di berbagai momen yang diunggah.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Konteks guru &amp; dokter:</strong> Pendidik dan dokter anak dapat menambahkan catatan observasi mendampingi momen di rumah.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Ringkasan Kunjungan Dokter:</strong> Siapkan rangkuman rapi berisi capaian tumbuh kembang, catatan tinggi/berat badan, dan pertanyaan untuk konsultasi berikutnya.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Tanya Jawab Ask KIIDA 24/7:</strong> Punya pertanyaan tentang pola tidur atau ide aktivitas bermain anak? Tanyakan kepada KIIDA kapan saja.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/mockup-growth-diary-3d.png"
+                alt="Tampilan layar aplikasi mobile Growth Diary KIIDA menampilkan tahapan tumbuh kembang dan catatan aktivitas"
+                width="1167"
+                height="1142"
+              />
+            </div>
+          </div>
+
+          <div class="feature-split is-reversed" style="margin-block-end: 2.75rem;">
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/mockup-discovery-platform-3d.png"
+                alt="Tampilan layar Discovery Platform KIIDA menampilkan Sensory Play, Speech Clinic, Yoga & Movement, Music Therapy, dan Art Studio"
+                width="1167"
+                height="1142"
+              />
+            </div>
+
+            <div>
+              <span class="eyebrow-pill">Discovery Platform</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Temukan kelas terpercaya, klinik &amp; <em>mainan terkurasi</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Saat Anda ingin mencoba kelas sensorik, terapi musik, studio seni, atau konsultasi wicara, KIIDA membuat
+                pencarian terasa nyaman dan terpercaya.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Dievaluasi oleh KIIDA + sesama orang tua:</strong> Setiap daftar memadukan ringkasan ulasan orang tua dengan evaluasi langsung tim KIIDA melalui kunjungan lokasi atau uji produk.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Produk &amp; layanan terkurasi:</strong> Beli mainan edukasi teruji serta pesan kelas bermain sensori, kelompok okupasi, klinik wicara, dan konsultasi anak.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Tanpa paksaan:</strong> Kami tidak pernah memaksakan rekomendasi berdasarkan hasil tumbuh kembang anak Anda—Anda bebas menjelajah dan menentukan yang terbaik bagi keluarga.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="id-booking-flow">
+            <h3 class="section-heading" style="font-size: clamp(1.45rem, 2.2vw, 1.95rem); margin-block-end: 1.25rem;">
+              Cara pemesanan kelas atau sesi konsultasi <em>dalam 4 langkah mudah</em>
+            </h3>
+            <div class="cards-grid-2">
+              <article class="warm-card is-yellow">
+                <span class="step-badge">1. Jelajahi &amp; Pilih Jadwal</span>
+                <h3>Lihat jadwal yang benar-benar tersedia di aplikasi</h3>
+                <p>
+                  Jelajahi kelas, sekolah, dan klinik berdasarkan kategori, baca ulasan kunjungan langsung tim KIIDA,
+                  dan tentukan waktu sesi yang cocok untuk keluarga Anda.
+                </p>
+              </article>
+
+              <article class="warm-card is-pink">
+                <span class="step-badge">2. Kunci Jadwal (Batas Waktu 1 Jam)</span>
+                <h3>Selesaikan pembayaran dengan pengingat ramah</h3>
+                <p>
+                  Kirim formulir pemesanan singkat dan selesaikan pembayaran dalam 1 jam untuk mengunci kuota Anda (biaya
+                  layanan tetap Rp5.000 transparan di awal), dengan pengingat ramah setiap 24 jam hingga H-1.
+                </p>
+              </article>
+
+              <article class="warm-card is-blue">
+                <span class="step-badge">3. Pembaruan Otomatis Kalender Keluarga</span>
+                <h3>Tersinkronisasi seketika saat pembayaran terkonfirmasi</h3>
+                <p>
+                  Segera setelah pembayaran terkonfirmasi, jadwal sesi langsung tampil di Kalender Keluarga KIIDA dan
+                  jumlah kuota yang tersisa di mitra diperbarui otomatis.
+                </p>
+              </article>
+
+              <article class="warm-card is-plum">
+                <span class="step-badge">4. Pencairan Dana Mitra yang Terlindungi</span>
+                <h3>Ketenangan dan kepastian sebelum hari pelaksanaan</h3>
+                <p>
+                  KIIDA menyimpan dana pembayaran pemesanan secara aman dan mencairkannya ke pihak pengelola atau klinik
+                  24 jam sebelum jadwal sesi Anda berlangsung.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="promise-banner">
+            💛 Gratis untuk memulai: Setiap keluarga dapat mengunggah hingga 5 foto dan 2 video setiap minggu secara
+            gratis, dengan akses penuh ke Growth Diary, tanya jawab Ask KIIDA, dan Discovery Platform.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="partners" class="section">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>For Educators, Schools &amp; Pediatric Clinics</span>
+            </span>
+            <h2 class="section-heading">
+              Less time on admin. <em>More time guiding children.</em>
+            </h2>
+            <p class="section-lead">
+              Whether you teach in a preschool classroom, run a sensory play studio, or lead a pediatric therapy clinic,
+              KIIDA simplifies daily parent communication and session bookings.
+            </p>
+          </div>
+
+          <div id="en-teachers" class="feature-split">
+            <div>
+              <span class="eyebrow-pill">Mobile App for Educators</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Classroom observation reporting, <em>made effortless</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Teachers want to spend their energy interacting with children—not staying late to write repetitive daily
+                updates for every parent.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Automatic timestamp &amp; child tagging:</strong> Upload photos or short videos from class activities and KIIDA organizes them by child and time.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>AI-assisted observation notes:</strong> KIIDA helps draft clear developmental observations that you review, edit, and share in seconds.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Focused educator view:</strong> Teachers have full access to upload classroom moments and write session notes without consumer marketplace clutter.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Generous free tier:</strong> Upload up to 7 photos and 3 videos per child each week at no cost.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/hero-phone-sensory.png"
+                alt="Classroom sensory play activity uploaded in the KIIDA mobile app"
+                width="648"
+                height="1070"
+              />
+            </div>
+          </div>
+
+          <div id="en-centers" class="feature-split is-reversed" style="margin-block-end: 2.5rem;">
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/mockup-discovery-platform-3d.png"
+                alt="KIIDA Discovery Platform listing sensory classes, speech clinics, music therapy, and art studios"
+                width="1167"
+                height="1142"
+              />
+            </div>
+
+            <div>
+              <span class="eyebrow-pill">Web Dashboard for Providers</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Connect with families looking for <em>your exact program</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Replace manual WhatsApp availability checks and scattered payment screenshots with a clean provider web
+                dashboard.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Dedicated Web Dashboard:</strong> Manage your center profile, update class or clinic schedules, and upload class activity content from any computer.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>KIIDA Site-Visit Badge:</strong> Our team visits partner locations and tests products so parents can book with confidence.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Automated reminders &amp; slot sync:</strong> When a parent books and pays, your open slots update immediately.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Payouts 24 hours before session day:</strong> Verified booking funds are transferred to your account 24 hours before the class or appointment.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 1.75rem;">
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Step 1 • Introduce Your Center</span>
+              <h3>Share your programs below</h3>
+              <p>Tell our partnerships team about your school, sensory studio, clinic, or educational goods brand.</p>
+            </article>
+
+            <article class="warm-card is-pink">
+              <span class="step-badge">Step 2 • Site Visit &amp; Onboarding</span>
+              <h3>We visit and set up your schedule</h3>
+              <p>Our team visits your location, creates your KIIDA evaluation highlight, and sets up your Web Dashboard.</p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Step 3 • Welcome Families</span>
+              <h3>Receive bookings &amp; share updates</h3>
+              <p>Parents discover your open slots on KIIDA, book effortlessly, and stay connected with classroom notes.</p>
+            </article>
+          </div>
+
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-primary" data-select-tab="partner">Apply to Partner with KIIDA →</a>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Untuk Pendidik, Sekolah &amp; Klinik Tumbuh Kembang</span>
+            </span>
+            <h2 class="section-heading">
+              Kurangi beban administrasi. <em>Luangkan lebih banyak waktu mendampingi anak.</em>
+            </h2>
+            <p class="section-lead">
+              Baik Anda mengajar di kelas prasekolah, mengelola studio bermain sensori, maupun memimpin klinik terapi
+              anak, KIIDA menyederhanakan komunikasi harian dengan orang tua dan pengelolaan pemesanan sesi.
+            </p>
+          </div>
+
+          <div id="id-teachers" class="feature-split">
+            <div>
+              <span class="eyebrow-pill">Aplikasi Mobile untuk Pendidik</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Pelaporan observasi kelas, <em>jauh lebih praktis dan mudah</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Guru ingin mencurahkan energinya untuk berinteraksi bersama anak-anak—bukan pulang larut demi mengetik
+                laporan harian berulang untuk setiap orang tua.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Waktu otomatis &amp; penandaan anak:</strong> Unggah foto atau video singkat saat kegiatan kelas, dan KIIDA akan menyusunnya berdasarkan anak dan waktu secara otomatis.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Catatan observasi berbantuan AI:</strong> KIIDA membantu merancang draf catatan tumbuh kembang yang runtut untuk Anda tinjau, sesuaikan, dan bagikan dalam hitungan detik.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Tampilan khusus pendidik:</strong> Guru memiliki akses penuh untuk mengunggah momen kelas dan mencatat observasi sesi tanpa terganggu tampilan pasar konsumen.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Batas gratis mingguan yang memadai:</strong> Unggah hingga 7 foto dan 3 video per anak setiap minggu tanpa biaya.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/hero-phone-sensory.png"
+                alt="Kegiatan bermain sensori di kelas yang diunggah ke aplikasi mobile KIIDA"
+                width="648"
+                height="1070"
+              />
+            </div>
+          </div>
+
+          <div id="id-centers" class="feature-split is-reversed" style="margin-block-end: 2.5rem;">
+            <div class="feature-visual-frame">
+              <img
+                src="assets/web/mockup-discovery-platform-3d.png"
+                alt="Tampilan Discovery Platform KIIDA memuat kelas bermain sensori, klinik wicara, terapi musik, dan studio seni"
+                width="1167"
+                height="1142"
+              />
+            </div>
+
+            <div>
+              <span class="eyebrow-pill">Dashboard Web untuk Penyedia Layanan</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Terhubung dengan keluarga yang mencari <em>program terbaik Anda</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Gantikan pengecekan ketersediaan jadwal manual lewat WhatsApp dan bukti transfer yang tercecer dengan
+                dashboard web mitra yang rapi.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Dashboard Web Khusus:</strong> Kelola profil tempat Anda, perbarui jadwal sesi kelas atau klinik, dan unggah konten kegiatan langsung dari komputer Anda.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Lencana Kunjungan Lokasi KIIDA:</strong> Tim kami mengunjungi lokasi mitra dan menguji produk agar orang tua dapat memesan dengan penuh rasa percaya.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Pengingat otomatis &amp; sinkronisasi kuota:</strong> Saat orang tua memesan dan membayar, sisa kuota sesi Anda langsung terbarui seketika.</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Pencairan dana 24 jam sebelum hari pelaksanaan:</strong> Dana pemesanan yang terverifikasi ditransfer ke rekening Anda 24 jam sebelum sesi kelas atau jadwal konsultasi dimulai.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 1.75rem;">
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Langkah 1 • Kenalkan Tempat Anda</span>
+              <h3>Bagikan program Anda di bawah</h3>
+              <p>Ceritakan kepada tim kemitraan kami tentang sekolah, studio sensori, klinik, atau jenama mainan edukasi Anda.</p>
+            </article>
+
+            <article class="warm-card is-pink">
+              <span class="step-badge">Langkah 2 • Kunjungan Lokasi &amp; Orientasi</span>
+              <h3>Kami berkunjung dan membantu menyiapkan jadwal</h3>
+              <p>Tim kami mengunjungi tempat Anda, menyusun sorotan kurasi KIIDA, dan mendampingi pengaturan Dashboard Web Anda.</p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Langkah 3 • Sambut Keluarga Baru</span>
+              <h3>Mulai terima pemesanan &amp; berbagi kabar</h3>
+              <p>Orang tua dapat menemukan slot Anda di KIIDA, memesan dengan praktis, dan tetap terhubung lewat catatan kelas.</p>
+            </article>
+          </div>
+
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-primary" data-select-tab="partner">Ajukan Kemitraan dengan KIIDA →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pricing" class="section section-lilac">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Simple, Honest Pricing</span>
+            </span>
+            <h2 class="section-heading">
+              Free to start for <em>every family and teacher.</em>
+            </h2>
+            <p class="section-lead">
+              We believe every parent and educator should have access to thoughtful milestone tracking without a paywall
+              at the door.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-pink">
+              <span class="step-badge">For Parents &amp; Families</span>
+              <h3>Free</h3>
+              <p>
+                Everything you need to start your child’s Growth Diary, track milestones, and explore classes.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Up to 5 photos &amp; 2 videos per week</strong> free</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Full Growth Diary &amp; CDC milestone checklists</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>24/7 Ask KIIDA parenting chat</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Browse &amp; book on the Discovery Platform</span>
+                </li>
+              </ul>
+              <p style="margin-block-start: auto; padding-block-start: 1rem; font-size: 0.88rem; color: var(--text-muted);">
+                Optional higher upload plans will be announced at launch.
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <span class="step-badge">For Teachers</span>
+              <h3>Free</h3>
+              <p>
+                Built for early-childhood educators to capture classroom activities and share AI-assisted notes with
+                parents.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Up to 7 photos &amp; 3 videos per child/week</strong> free</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Automatic timestamp &amp; child facial tagging</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>AI-assisted classroom observation drafting</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Session notes shared directly to enrolled families</span>
+                </li>
+              </ul>
+              <p style="margin-block-start: auto; padding-block-start: 1rem;">
+                <a href="#en-teachers"><strong>Learn more for Teachers →</strong></a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Class &amp; Clinic Bookings</span>
+              <h3>IDR 5,000 / booking</h3>
+              <p>
+                When you book a sensory class, therapy session, or pediatric consultation through the Discovery
+                Platform:
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Flat IDR 5,000 service fee</strong> per confirmed booking, always shown before payment</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Instant Family Calendar &amp; slot synchronization</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Automated booking reminders before session day</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Partner centers pay a commission only on completed bookings or goods sold</span>
+                </li>
+              </ul>
+              <p style="margin-block-start: auto; padding-block-start: 1rem;">
+                <a href="#contact" data-select-tab="partner"><strong>Partner with KIIDA →</strong></a>
+              </p>
+            </article>
+          </div>
+
+          <div tabindex="0" role="region" aria-labelledby="en-role-comparison-caption" class="table-wrapper">
+            <table class="info-table">
+              <caption id="en-role-comparison-caption" class="visually-hidden">
+                Comparison of features included for Parents, Teachers, and Partner Centers
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Feature</th>
+                  <th scope="col">Parents (Mobile App)</th>
+                  <th scope="col">Teachers (Mobile App)</th>
+                  <th scope="col">Schools &amp; Clinics (Web Dashboard)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Free weekly upload allowance</th>
+                  <td>Up to 5 photos &amp; 2 videos / week</td>
+                  <td>Up to 7 photos &amp; 3 videos / child / week</td>
+                  <td>Class &amp; program media uploads</td>
+                </tr>
+                <tr>
+                  <th scope="row">Activity Upload &amp; Auto-Tagging</th>
+                  <td>Full access (upload &amp; view)</td>
+                  <td>Full access (upload &amp; add observations)</td>
+                  <td>Provider access (upload class activities)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Growth Diary &amp; CDC Checklists</th>
+                  <td>Full access + Ask KIIDA 24/7 chat</td>
+                  <td>Session observation notes for students</td>
+                  <td>View enrolled child profiles &amp; shared notes</td>
+                </tr>
+                <tr>
+                  <th scope="row">Discovery Platform &amp; Bookings</th>
+                  <td>Browse, book classes/clinics &amp; buy goods</td>
+                  <td>Not shown in educator view</td>
+                  <td>Listed &amp; bookable with live slot management</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Biaya yang Jujur dan Transparan</span>
+            </span>
+            <h2 class="section-heading">
+              Gratis untuk memulai bagi <em>setiap keluarga dan guru.</em>
+            </h2>
+            <p class="section-lead">
+              Kami meyakini bahwa setiap orang tua dan pendidik berhak mendapatkan sarana pemantauan tumbuh kembang yang
+              bermakna tanpa terhalang biaya berlangganan di awal.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-pink">
+              <span class="step-badge">Untuk Orang Tua &amp; Keluarga</span>
+              <h3>Gratis</h3>
+              <p>
+                Semua fitur utama untuk memulai Growth Diary buah hati Anda, memantau tahapan perkembangan, dan menjelajahi kelas.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Hingga 5 foto &amp; 2 video per minggu</strong> gratis</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Akses penuh Growth Diary &amp; daftar pantau tumbuh kembang CDC</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Tanya jawab pengasuhan Ask KIIDA 24/7</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Jelajahi &amp; pesan kelas di Discovery Platform</span>
+                </li>
+              </ul>
+              <p style="margin-block-start: auto; padding-block-start: 1rem; font-size: 0.88rem; color: var(--text-muted);">
+                Paket kapasitas unggahan yang lebih tinggi akan diumumkan saat peluncuran.
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <span class="step-badge">Untuk Guru</span>
+              <h3>Gratis</h3>
+              <p>
+                Dirancang bagi pendidik anak usia dini untuk mendokumentasikan kegiatan kelas dan membagikan catatan
+                observasi berbantuan AI kepada orang tua.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Hingga 7 foto &amp; 3 video per anak/minggu</strong> gratis</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Pencatatan waktu otomatis &amp; penandaan anak</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Penyusunan draf catatan observasi kelas berbantuan AI</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Catatan sesi terhubung langsung ke keluarga murid</span>
+                </li>
+              </ul>
+              <p style="margin-block-start: auto; padding-block-start: 1rem;">
+                <a href="#id-teachers"><strong>Pelajari lebih lanjut untuk Guru →</strong></a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <span class="step-badge">Pemesanan Kelas &amp; Klinik</span>
+              <h3>Rp5.000 / pemesanan</h3>
+              <p>
+                Saat Anda memesan kelas bermain sensori, sesi terapi, atau konsultasi dokter anak melalui Discovery
+                Platform:
+              </p>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span><strong>Biaya layanan tetap Rp5.000</strong> per pemesanan terkonfirmasi, selalu ditampilkan transparan sebelum pembayaran</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Sinkronisasi seketika dengan Kalender Keluarga &amp; kuota sesi</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Pengingat pemesanan otomatis menjelang hari kegiatan</span>
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span>Mitra hanya membayar komisi dari pemesanan yang sukses terlaksana atau produk yang terjual</span>
+                </li>
+              </ul>
+              <p style="margin-block-start: auto; padding-block-start: 1rem;">
+                <a href="#contact" data-select-tab="partner"><strong>Bermitra dengan KIIDA →</strong></a>
+              </p>
+            </article>
+          </div>
+
+          <div tabindex="0" role="region" aria-labelledby="id-role-comparison-caption" class="table-wrapper">
+            <table class="info-table">
+              <caption id="id-role-comparison-caption" class="visually-hidden">
+                Perbandingan fitur yang tersedia untuk Orang Tua, Guru, dan Mitra
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Fitur</th>
+                  <th scope="col">Orang Tua (Aplikasi Mobile)</th>
+                  <th scope="col">Guru (Aplikasi Mobile)</th>
+                  <th scope="col">Sekolah &amp; Klinik (Dashboard Web)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Kuota unggahan mingguan gratis</th>
+                  <td>Hingga 5 foto &amp; 2 video / minggu</td>
+                  <td>Hingga 7 foto &amp; 3 video / anak / minggu</td>
+                  <td>Unggahan media kelas &amp; program</td>
+                </tr>
+                <tr>
+                  <th scope="row">Unggah Kegiatan &amp; Penandaan Otomatis</th>
+                  <td>Akses penuh (unggah &amp; lihat)</td>
+                  <td>Akses penuh (unggah &amp; buat observasi)</td>
+                  <td>Akses penyedia (unggah kegiatan kelas)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Growth Diary &amp; Daftar Pantau CDC</th>
+                  <td>Akses penuh + tanya jawab Ask KIIDA 24/7</td>
+                  <td>Catatan observasi sesi untuk murid</td>
+                  <td>Lihat profil murid terdaftar &amp; catatan bersama</td>
+                </tr>
+                <tr>
+                  <th scope="row">Discovery Platform &amp; Pemesanan</th>
+                  <td>Jelajahi, pesan kelas/klinik &amp; beli mainan</td>
+                  <td>Tidak ditampilkan di tampilan pendidik</td>
+                  <td>Terdaftar &amp; dapat dipesan dengan manajemen kuota langsung</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>About KIIDA</span>
+            </span>
+            <h2 class="section-heading">
+              Built to walk beside families <em>in every early step.</em>
+            </h2>
+            <p class="section-lead">
+              KIIDA is an early-childhood development companion created in Jakarta by
+              <strong>PT Kiida Tumbuh Bersama</strong>—connecting parents, teachers, learning centers, and pediatric
+              specialists around how children grow.
+            </p>
+          </div>
+
+          <div class="feature-split" style="margin-block-end: 2.5rem;">
+            <div>
+              <span class="eyebrow-pill">Our Story</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Why we started <em>KIIDA</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                During a child’s first five years, growth happens everywhere: at the breakfast table, on the preschool
+                play mat, and in sensory classes. Yet for most families, those moments end up scattered across
+                thousands of phone photos, paper folders, and separate chat threads.
+              </p>
+              <p style="color: var(--text-plum);">
+                At the same time, preschool teachers spend hours writing manual logs after class, and parents who want a
+                good sensory playgroup or speech consultation have to piece together recommendations from scratch.
+              </p>
+              <p style="color: var(--text-plum); margin-block-end: 0;">
+                We founded <strong>PT Kiida Tumbuh Bersama</strong> to bring all three sides together—turning everyday
+                activity moments into calm, structured milestone tracking aligned with CDC guidelines, and connecting
+                families with trusted classes, clinics, and developmental goods when they need them.
+              </p>
+            </div>
+
+            <div class="warm-card" style="background: var(--bg-cream);">
+              <div style="display: flex; align-items: center; gap: 1.25rem; margin-block-end: 0.75rem;">
+                <img
+                  src="assets/PNG/Artboard%207%20-%20PNG.png"
+                  alt="KIIDA Stacked Logo"
+                  width="110"
+                  height="110"
+                  style="inline-size: 5.5rem; block-size: auto;"
+                />
+                <div>
+                  <h3 style="margin: 0 0 0.25rem;">The Meaning of Our Mark</h3>
+                  <p style="font-size: 0.9rem;">Three simple shapes that represent every child’s circle of care.</p>
+                </div>
+              </div>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" style="background: #FFF9DB; color: #6E470B; border-color: #6E470B;" aria-hidden="true">▲</span>
+                  <span><strong>Sunshine Roof (#FFE67B):</strong> A warm, protective home where every child feels safe to explore.</span>
+                </li>
+                <li>
+                  <span class="check-icon" style="background: #FFF0F7; color: #7A1E4D; border-color: #7A1E4D;" aria-hidden="true">◡</span>
+                  <span><strong>Blossom Smile (#FF80BD):</strong> Joyful curiosity and the nurturing bond between parent, teacher, and child.</span>
+                </li>
+                <li>
+                  <span class="check-icon" style="background: #EDF6FF; color: #164878; border-color: #164878;" aria-hidden="true">▬</span>
+                  <span><strong>Sky Foundation (#6EBAFF):</strong> Steady, evidence-informed support underneath every developmental step.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cards-grid-2" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-plum">
+              <h3>🔒 Your child’s photos are never sold or used for ads</h3>
+              <p>
+                Every photo, video, and milestone note belongs to your family. We never sell family data or share it
+                with advertising networks, and you can delete any photo or profile whenever you wish.
+              </p>
+            </article>
+
+            <article class="warm-card is-plum">
+              <h3>🧭 No pushy recommendations—parents choose</h3>
+              <p>
+                KIIDA never pushes classes or products based on your child’s milestone results. Your Growth Diary gives
+                you clarity; you decide what to browse and book in the Discovery Platform.
+              </p>
+            </article>
+
+            <article class="warm-card is-plum">
+              <h3>🤝 Steady patterns + real human expertise</h3>
+              <p>
+                One photo is never enough to judge a skill. KIIDA waits for consistent evidence across multiple moments
+                and pairs it with observations from your child’s teachers and doctors.
+              </p>
+            </article>
+
+            <article class="warm-card is-plum">
+              <h3>🩺 Support, never a medical diagnosis</h3>
+              <p>
+                KIIDA helps you organize observations aligned with CDC milestones so you can have richer, more informed
+                conversations with your pediatrician or specialist.
+              </p>
+            </article>
+          </div>
+
+          <div tabindex="0" role="region" aria-labelledby="en-company-facts-caption" class="table-wrapper">
+            <table class="info-table">
+              <caption id="en-company-facts-caption" class="visually-hidden">
+                Company information for PT Kiida Tumbuh Bersama
+              </caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Company Name</th>
+                  <td><strong>PT Kiida Tumbuh Bersama</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Product Name</th>
+                  <td>KIIDA (Mobile App for iOS &amp; Android, plus Partner Web Dashboard)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Founded</th>
+                  <td>2025 • Jakarta, Indonesia</td>
+                </tr>
+                <tr>
+                  <th scope="row">What We Do</th>
+                  <td>
+                    Early-childhood developmental milestone diary and AI-assisted observation platform for parents and
+                    teachers, paired with a curated discovery and booking platform for learning centers, sensory studios,
+                    pediatric clinics, and developmental goods.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Head Office</th>
+                  <td>District 8, Prosperity Tower Level 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia</td>
+                </tr>
+                <tr>
+                  <th scope="row">Telephone</th>
+                  <td><a href="tel:+622150889900">+62 21 5088 9900</a> (Monday – Friday, 09:00 – 18:00 WIB (GMT+7))</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email Contacts</th>
+                  <td>
+                    General: <a href="mailto:hello@kiida.app">hello@kiida.app</a> •
+                    Support: <a href="mailto:support@kiida.app">support@kiida.app</a> •
+                    Partnerships: <a href="mailto:partners@kiida.app">partners@kiida.app</a> •
+                    Privacy: <a href="mailto:privacy@kiida.app">privacy@kiida.app</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Tentang KIIDA</span>
+            </span>
+            <h2 class="section-heading">
+              Hadir untuk mendampingi keluarga <em>di setiap langkah awal.</em>
+            </h2>
+            <p class="section-lead">
+              KIIDA adalah aplikasi pendamping tumbuh kembang anak usia dini yang didirikan di Jakarta oleh
+              <strong>PT Kiida Tumbuh Bersama</strong>—menghubungkan orang tua, guru, tempat belajar, dan spesialis anak
+              dalam perjalanan tumbuh kembang anak.
+            </p>
+          </div>
+
+          <div class="feature-split" style="margin-block-end: 2.5rem;">
+            <div>
+              <span class="eyebrow-pill">Cerita Kami</span>
+              <h3 class="section-heading" style="font-size: clamp(1.55rem, 2.5vw, 2.15rem);">
+                Mengapa kami membangun <em>KIIDA</em>
+              </h3>
+              <p style="color: var(--text-plum);">
+                Pada lima tahun pertama kehidupan anak, perkembangan terjadi di mana saja: di meja makan keluarga, di
+                atas matras bermain prasekolah, hingga di kelas bermain sensori. Namun bagi kebanyakan keluarga, momen
+                berharga tersebut sering kali tercecer di ribuan galeri foto ponsel, tumpukan berkas cetak, dan pesan
+                obrolan yang terpisah-pisah.
+              </p>
+              <p style="color: var(--text-plum);">
+                Di saat yang sama, guru prasekolah menghabiskan waktu berjam-jam menulis laporan manual setelah jam
+                belajar usai, dan orang tua yang mencari kelompok bermain sensori atau konsultasi terapi wicara yang
+                terpercaya harus mencari rekomendasi sendiri dari awal.
+              </p>
+              <p style="color: var(--text-plum); margin-block-end: 0;">
+                Kami mendirikan <strong>PT Kiida Tumbuh Bersama</strong> untuk menyatukan ketiga sisi ini—mengubah dokumentasi
+                aktivitas sehari-hari menjadi pemantauan tumbuh kembang yang terstruktur dan selaras dengan panduan CDC,
+                serta menghubungkan keluarga dengan kelas, klinik, dan mainan stimulasi terpercaya saat dibutuhkan.
+              </p>
+            </div>
+
+            <div class="warm-card" style="background: var(--bg-cream);">
+              <div style="display: flex; align-items: center; gap: 1.25rem; margin-block-end: 0.75rem;">
+                <img
+                  src="assets/PNG/Artboard%207%20-%20PNG.png"
+                  alt="Logo Bertumpuk KIIDA"
+                  width="110"
+                  height="110"
+                  style="inline-size: 5.5rem; block-size: auto;"
+                />
+                <div>
+                  <h3 style="margin: 0 0 0.25rem;">Makna Lambang Kami</h3>
+                  <p style="font-size: 0.9rem;">Tiga bentuk sederhana yang melambangkan lingkaran kepedulian bagi setiap anak.</p>
+                </div>
+              </div>
+              <ul class="check-list">
+                <li>
+                  <span class="check-icon" style="background: #FFF9DB; color: #6E470B; border-color: #6E470B;" aria-hidden="true">▲</span>
+                  <span><strong>Atap Mentari (#FFE67B):</strong> Rumah yang hangat dan melindungi, tempat setiap anak merasa aman untuk bereksplorasi.</span>
+                </li>
+                <li>
+                  <span class="check-icon" style="background: #FFF0F7; color: #7A1E4D; border-color: #7A1E4D;" aria-hidden="true">◡</span>
+                  <span><strong>Senyum Mekar (#FF80BD):</strong> Rasa ingin tahu yang riang serta ikatan kasih sayang yang erat antara orang tua, guru, dan anak.</span>
+                </li>
+                <li>
+                  <span class="check-icon" style="background: #EDF6FF; color: #164878; border-color: #164878;" aria-hidden="true">▬</span>
+                  <span><strong>Pijakan Langit (#6EBAFF):</strong> Dukungan kokoh dan berbasis bukti yang melandasi setiap langkah tumbuh kembang anak.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cards-grid-2" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-plum">
+              <h3>🔒 Foto buah hati Anda tidak pernah dijual atau digunakan untuk iklan</h3>
+              <p>
+                Setiap foto, video, dan catatan tumbuh kembang adalah milik keluarga Anda sepenuhnya. Kami tidak pernah
+                menjual data keluarga atau membagikannya ke jaringan periklanan, dan Anda dapat menghapus foto atau
+                profil kapan pun diinginkan.
+              </p>
+            </article>
+
+            <article class="warm-card is-plum">
+              <h3>🧭 Tanpa rekomendasi yang memaksa—orang tua yang menentukan</h3>
+              <p>
+                KIIDA tidak pernah memaksakan kelas atau produk berdasarkan hasil pantauan tumbuh kembang anak Anda.
+                Growth Diary memberi Anda kejelasan; Anda sendiri yang memilih apa yang ingin dijelajahi dan dipesan di
+                Discovery Platform.
+              </p>
+            </article>
+
+            <article class="warm-card is-plum">
+              <h3>🤝 Pola berkelanjutan + keahlian manusia nyata</h3>
+              <p>
+                Satu foto tidak pernah cukup untuk menilai sebuah kemampuan. KIIDA menunggu bukti konsisten dari
+                berbagai momen dan memadukannya dengan catatan observasi dari guru dan dokter anak Anda.
+              </p>
+            </article>
+
+            <article class="warm-card is-plum">
+              <h3>🩺 Pendampingan suportif, bukan diagnosis medis</h3>
+              <p>
+                KIIDA membantu Anda menyusun pengamatan yang selaras dengan panduan tahapan CDC agar Anda dapat
+                berdiskusi lebih mendalam dan terarah dengan dokter spesialis anak atau tenaga ahli.
+              </p>
+            </article>
+          </div>
+
+          <div tabindex="0" role="region" aria-labelledby="id-company-facts-caption" class="table-wrapper">
+            <table class="info-table">
+              <caption id="id-company-facts-caption" class="visually-hidden">
+                Informasi perusahaan untuk PT Kiida Tumbuh Bersama
+              </caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Nama Perusahaan</th>
+                  <td><strong>PT Kiida Tumbuh Bersama</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Nama Produk</th>
+                  <td>KIIDA (Aplikasi Mobile untuk iOS &amp; Android, serta Dashboard Web Mitra)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tahun Berdiri</th>
+                  <td>2025 • Jakarta, Indonesia</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fokus Layanan</th>
+                  <td>
+                    Buku harian tahapan tumbuh kembang anak usia dini dan platform catatan observasi kelas berbantuan AI
+                    untuk orang tua dan guru, dipadukan dengan direktori kurasi dan pemesanan kelas sensorik, studio
+                    bermain, klinik anak, serta mainan edukatif.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Kantor Pusat</th>
+                  <td>District 8, Prosperity Tower Lantai 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia</td>
+                </tr>
+                <tr>
+                  <th scope="row">Telepon</th>
+                  <td><a href="tel:+622150889900">+62 21 5088 9900</a> (Senin – Jumat, 09.00 – 18.00 WIB (GMT+7))</td>
+                </tr>
+                <tr>
+                  <th scope="row">Kontak Email</th>
+                  <td>
+                    Umum: <a href="mailto:hello@kiida.app">hello@kiida.app</a> •
+                    Bantuan: <a href="mailto:support@kiida.app">support@kiida.app</a> •
+                    Kemitraan: <a href="mailto:partners@kiida.app">partners@kiida.app</a> •
+                    Privasi: <a href="mailto:privacy@kiida.app">privacy@kiida.app</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="section section-oat">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Help Center &amp; FAQ</span>
+            </span>
+            <h2 class="section-heading">
+              Answers to common <em>questions about KIIDA.</em>
+            </h2>
+            <p class="section-lead">
+              Everything you need to know about the Growth Diary, CDC milestone checklists, child privacy, and booking
+              classes or consultations.
+            </p>
+          </div>
+
+          <div class="cards-grid-2" style="gap: 2.5rem; align-items: start;">
+            <section class="accordion-group" aria-labelledby="en-faq-getting-started">
+              <h3 id="en-faq-getting-started" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                1. Getting Started
+              </h3>
+
+              <details name="en-faq-start" open>
+                <summary>Who is KIIDA made for, and what ages does it cover?</summary>
+                <div class="accordion-body">
+                  <p>
+                    KIIDA is designed for parents and guardians of young children (from <strong>2 months through 5
+                    years of age</strong>), early-childhood teachers, and partner learning centers or pediatric clinics.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-start">
+                <summary>Can I track more than one child in the same family account?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Yes. You can add multiple child profiles under a single parent account and switch between them at the
+                    top of your Growth Diary. When you upload a photo or video, KIIDA helps tag the right child profile
+                    automatically.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-start">
+                <summary>Can I use KIIDA even if my child’s preschool isn’t on KIIDA yet?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Absolutely. Parents can use KIIDA independently at home to upload moments, track CDC developmental
+                    milestones, ask questions in Ask KIIDA chat, and book sensory classes or clinic consultations. If
+                    your school joins later, their classroom notes can connect right into your child’s diary.
+                  </p>
+                </div>
+              </details>
+            </section>
+
+            <section class="accordion-group" aria-labelledby="en-faq-milestones">
+              <h3 id="en-faq-milestones" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                2. Milestones &amp; How the AI Works
+              </h3>
+
+              <details name="en-faq-ai" open>
+                <summary>How does KIIDA decide when a milestone is reached?</summary>
+                <div class="accordion-body">
+                  <p>
+                    KIIDA never marks a milestone based on a single photo. Instead, it reviews patterns across multiple
+                    uploaded photos or videos over time—and combines them with observations from your child’s teacher
+                    or doctor—before marking a milestone on your age-appropriate CDC checklist.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-ai">
+                <summary>Is KIIDA a medical diagnosis tool?</summary>
+                <div class="accordion-body">
+                  <p>
+                    No. KIIDA is an educational and organizational companion that helps you keep track of everyday
+                    moments and prepare a clear summary for your pediatrician. It never replaces an in-person clinical
+                    evaluation by a qualified doctor or therapist.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-ai">
+                <summary>Does KIIDA push classes or products based on my child’s milestone checklist?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Never. One of our core product principles is that we do not make automated recommendations based on
+                    developmental assessment results. Parents browse the Discovery Platform and choose what they want
+                    for their child themselves.
+                  </p>
+                </div>
+              </details>
+            </section>
+
+            <section class="accordion-group" aria-labelledby="en-faq-privacy">
+              <h3 id="en-faq-privacy" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                3. Privacy &amp; Child Safety
+              </h3>
+
+              <details name="en-faq-priv" open>
+                <summary>Who can see my child’s photos, videos, and Growth Diary?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Your child’s Growth Diary is private to you and the family members or educators you explicitly
+                    authorize. Teachers only see classroom uploads and session notes for their assigned students, and
+                    partner centers only see profiles of children enrolled in their sessions.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-priv">
+                <summary>How does automatic face tagging work, and is it shared?</summary>
+                <div class="accordion-body">
+                  <p>
+                    When you or a teacher upload an activity photo, KIIDA uses a private facial identifier strictly to
+                    tag which child is in the moment and organize their diary. It is isolated to your authorized
+                    account, never sold, and never shared with advertising networks.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-priv">
+                <summary>How can I delete a photo or my child’s profile?</summary>
+                <div class="accordion-body">
+                  <p>
+                    You can delete any individual post or remove an entire child profile at any time from your account
+                    settings, or by emailing <a href="mailto:privacy@kiida.app">privacy@kiida.app</a>.
+                  </p>
+                </div>
+              </details>
+            </section>
+
+            <section class="accordion-group" aria-labelledby="en-faq-bookings">
+              <h3 id="en-faq-bookings" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                4. Bookings, Fees &amp; Partner Centers
+              </h3>
+
+              <details name="en-faq-book" open>
+                <summary>How does the 1-hour booking payment window work?</summary>
+                <div class="accordion-body">
+                  <p>
+                    When you submit a booking form for a sensory class or clinic appointment, your slot is held while
+                    you complete payment. If payment is not completed within 1 hour, KIIDA sends a gentle reminder
+                    every 24 hours up until the day before the session (D-1).
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-book">
+                <summary>What is the IDR 5,000 booking service fee?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Each confirmed booking on the Discovery Platform includes a flat IDR 5,000 service fee, clearly
+                    shown before checkout. It covers real-time slot reservation, Family Calendar synchronization, and
+                    payment protection.
+                  </p>
+                </div>
+              </details>
+
+              <details name="en-faq-book">
+                <summary>How do learning centers and clinics receive their payouts?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Once a parent’s booking payment is confirmed, the slot is locked on the partner’s Web Dashboard and
+                    the payout is transferred automatically 24 hours before the scheduled session date.
+                  </p>
+                </div>
+              </details>
+            </section>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Pusat Bantuan &amp; FAQ</span>
+            </span>
+            <h2 class="section-heading">
+              Jawaban atas pertanyaan umum <em>seputar KIIDA.</em>
+            </h2>
+            <p class="section-lead">
+              Segala hal yang perlu Anda ketahui tentang Growth Diary, daftar pantau tahapan tumbuh kembang CDC, privasi
+              data anak, serta pemesanan kelas atau konsultasi.
+            </p>
+          </div>
+
+          <div class="cards-grid-2" style="gap: 2.5rem; align-items: start;">
+            <section class="accordion-group" aria-labelledby="id-faq-getting-started">
+              <h3 id="id-faq-getting-started" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                1. Memulai Menggunakan KIIDA
+              </h3>
+
+              <details name="id-faq-start" open>
+                <summary>Untuk siapa KIIDA dirancang, dan rentang usia anak berapa saja yang dicakup?</summary>
+                <div class="accordion-body">
+                  <p>
+                    KIIDA dirancang untuk orang tua dan wali anak usia dini (mulai dari <strong>usia 2 bulan hingga 5
+                    tahun</strong>), guru PAUD dan prasekolah, serta mitra studio bermain sensori dan klinik anak.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-start">
+                <summary>Bisakah saya memantau lebih dari satu anak dalam satu akun keluarga?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Tentu saja. Anda dapat menambahkan beberapa profil anak dalam satu akun orang tua dan beralih profil
+                    dengan mudah di bagian atas Growth Diary. Saat Anda mengunggah foto atau video, KIIDA membantu
+                    mengenali dan menandai profil anak yang tepat secara otomatis.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-start">
+                <summary>Apakah saya bisa menggunakan KIIDA meski prasekolah anak saya belum bergabung?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Sangat bisa. Orang tua dapat menggunakan KIIDA secara mandiri di rumah untuk mengunggah momen
+                    keseharian, memantau tahapan tumbuh kembang CDC, berkonsultasi di tanya jawab Ask KIIDA, serta
+                    memesan kelas bermain atau sesi klinik. Jika sekolah anak Anda bergabung di kemudian hari, catatan
+                    observasi dari guru dapat langsung terhubung ke buku harian buah hati Anda.
+                  </p>
+                </div>
+              </details>
+            </section>
+
+            <section class="accordion-group" aria-labelledby="id-faq-milestones">
+              <h3 id="id-faq-milestones" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                2. Tahapan Perkembangan &amp; Cara Kerja AI
+              </h3>
+
+              <details name="id-faq-ai" open>
+                <summary>Bagaimana cara KIIDA menentukan bahwa suatu tahapan perkembangan telah tercapai?</summary>
+                <div class="accordion-body">
+                  <p>
+                    KIIDA tidak pernah menandai tahapan tumbuh kembang hanya berdasarkan satu foto. Melainkan membaca pola
+                    berkelanjutan dari berbagai foto atau video yang diunggah seiring waktu—serta memadukannya dengan
+                    catatan observasi dari guru atau dokter anak Anda—sebelum menandai capaian tersebut pada daftar pantau
+                    CDC yang sesuai dengan usia anak.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-ai">
+                <summary>Apakah KIIDA merupakan alat diagnosis medis?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Bukan. KIIDA adalah sarana edukatif dan dokumentasi yang membantu Anda merangkum momen keseharian dan
+                    menyiapkan catatan terstruktur untuk dikonsultasikan kepada dokter spesialis anak. KIIDA tidak
+                    menggantikan evaluasi klinis langsung oleh dokter atau tenaga medis berlisensi.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-ai">
+                <summary>Apakah KIIDA memaksakan rekomendasi kelas atau produk berdasarkan hasil pantauan anak saya?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Sama sekali tidak. Salah satu prinsip utama produk kami adalah tidak membuat rekomendasi otomatis
+                    yang membebani orang tua berdasarkan hasil evaluasi perkembangan anak. Orang tua bebas menjelajahi
+                    Discovery Platform dan menentukan sendiri pilihan yang paling sesuai bagi buah hati.
+                  </p>
+                </div>
+              </details>
+            </section>
+
+            <section class="accordion-group" aria-labelledby="id-faq-privacy">
+              <h3 id="id-faq-privacy" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                3. Privasi &amp; Perlindungan Data Anak
+              </h3>
+
+              <details name="id-faq-priv" open>
+                <summary>Siapa saja yang dapat melihat foto, video, dan Growth Diary anak saya?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Growth Diary buah hati Anda bersifat sepenuhnya privat, hanya dapat diakses oleh Anda dan anggota
+                    keluarga atau pendidik yang Anda beri izin resmi. Guru hanya dapat melihat unggahan kegiatan kelas
+                    dan catatan sesi untuk murid di kelasnya, sedangkan pihak mitra hanya melihat data anak yang
+                    terdaftar pada sesi mereka.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-priv">
+                <summary>Bagaimana cara kerja penandaan anak otomatis, dan apakah data tersebut dibagikan?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Saat Anda atau guru mengunggah foto aktivitas, KIIDA memanfaatkan pengenal visual privat semata-mata
+                    untuk mengelompokkan momen ke profil anak yang sesuai dan merapikan buku hariannya. Data ini terisolasi
+                    aman dalam akun Anda, tidak pernah dijual, dan tidak pernah dibagikan kepada jaringan periklanan.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-priv">
+                <summary>Bagaimana cara menghapus foto atau profil anak saya?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Anda dapat menghapus unggahan tertentu atau menghapus seluruh profil anak kapan saja melalui menu
+                    pengaturan akun di aplikasi, atau dengan mengirimkan permohonan ke email <a href="mailto:privacy@kiida.app">privacy@kiida.app</a>.
+                  </p>
+                </div>
+              </details>
+            </section>
+
+            <section class="accordion-group" aria-labelledby="id-faq-bookings">
+              <h3 id="id-faq-bookings" class="section-heading" style="font-size: 1.45rem; margin-block: 0 0.5rem;">
+                4. Pemesanan, Pembayaran &amp; Mitra Terdaftar
+              </h3>
+
+              <details name="id-faq-book" open>
+                <summary>Bagaimana batas waktu pembayaran 1 jam dalam pemesanan sesi bekerja?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Saat Anda mengirimkan formulir pemesanan kelas sensorik atau jadwal klinik, kuota sesi Anda ditahan
+                    selama Anda menyelesaikan pembayaran. Jika pembayaran belum selesai dalam waktu 1 jam, KIIDA akan
+                    mengirimkan pengingat ramah setiap 24 jam hingga satu hari sebelum pelaksanaan (H-1).
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-book">
+                <summary>Untuk apa biaya layanan pemesanan sebesar Rp5.000?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Setiap pemesanan terkonfirmasi di Discovery Platform dikenakan biaya layanan tetap sebesar Rp5.000,
+                    yang selalu ditampilkan jelas sebelum Anda membayar. Biaya ini mencakup kepastian reservasi kuota
+                    secara real-time, sinkronisasi ke Kalender Keluarga, dan perlindungan pembayaran.
+                  </p>
+                </div>
+              </details>
+
+              <details name="id-faq-book">
+                <summary>Bagaimana tempat belajar dan klinik menerima pencairan dana pemesanan?</summary>
+                <div class="accordion-body">
+                  <p>
+                    Setelah pembayaran orang tua terverifikasi, jadwal sesi dikunci di Dashboard Web mitra dan dana
+                    pemesanan dicairkan secara otomatis ke rekening mitra 24 jam sebelum tanggal sesi berlangsung.
+                  </p>
+                </div>
+              </details>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section section-lilac">
+      <div class="container">
+        <div data-lang="en">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Get in Touch &amp; Early Access</span>
+            </span>
+            <h2 class="section-heading">
+              Join early access or <em>talk with our team in Jakarta.</em>
+            </h2>
+            <p class="section-lead">
+              Whether you’re a parent waiting for our iOS &amp; Android launch, a school or clinic ready to partner, or
+              simply have a question—our team replies within 1–2 working days.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-pink">
+              <h3>Families &amp; Support</h3>
+              <p>Questions about the KIIDA app, early access, or your child’s Growth Diary.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>General:</strong> <a href="mailto:hello@kiida.app">hello@kiida.app</a><br />
+                <strong>Support:</strong> <a href="mailto:support@kiida.app">support@kiida.app</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <h3>Schools, Studios &amp; Clinics</h3>
+              <p>Interested in onboarding your teachers or listing your classes and consultations on KIIDA.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Partnerships:</strong> <a href="mailto:partners@kiida.app">partners@kiida.app</a><br />
+                <strong>WhatsApp:</strong> <a href="https://wa.me/6281199008822">+62 811 9900 8822</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <h3>Jakarta Head Office</h3>
+              <p>
+                <strong>PT Kiida Tumbuh Bersama</strong><br />
+                District 8, Prosperity Tower Level 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Phone:</strong> <a href="tel:+622150889900">+62 21 5088 9900</a><br />
+                <strong>Hours:</strong> Monday – Friday, 09:00 – 18:00 WIB (GMT+7)<br />
+                <a href="https://maps.google.com/?q=District+8+Prosperity+Tower+SCBD+Jakarta" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+              </p>
+            </article>
+          </div>
+
+          <div class="form-card tabs-container">
+            <div role="tablist" class="tabs-bar" aria-label="Choose inquiry form">
+              <button
+                type="button"
+                role="tab"
+                id="en-tab-ea"
+                data-tab-key="early-access"
+                aria-selected="true"
+                tabindex="0"
+              >
+                Join Early Access
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="en-tab-partner"
+                data-tab-key="partner"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Partner Inquiry (Schools &amp; Clinics)
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="en-tab-msg"
+                data-tab-key="message"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                General Message
+              </button>
+            </div>
+
+            <!-- Panel 1: Early Access -->
+            <div role="tabpanel" aria-labelledby="en-tab-ea">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Join the Early Access List
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Tell us your role and we’ll invite you as soon as KIIDA opens on iOS &amp; Android.
+                </p>
+
+                <form
+                  action="mailto:hello@kiida.app"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="hello@kiida.app"
+                  data-subject="KIIDA Early Access Request"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-ea-name">Your full name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-ea-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        enterkeyhint="next"
+                        data-error="en-ea-name-error"
+                      />
+                      <div id="en-ea-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter your name.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-ea-email">Email address <span aria-hidden="true">*</span></label>
+                      <span id="en-ea-email-hint" class="hint">Format: you@example.com</span>
+                      <input
+                        type="email"
+                        id="en-ea-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        enterkeyhint="next"
+                        aria-describedby="en-ea-email-hint"
+                        data-error="en-ea-email-error"
+                      />
+                      <div id="en-ea-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Enter an email address in the format you@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-ea-role">I am joining as a <span aria-hidden="true">*</span></label>
+                    <select id="en-ea-role" name="role" required data-error="en-ea-role-error">
+                      <option value="">Select one…</option>
+                      <option value="Parent">Parent or guardian</option>
+                      <option value="Teacher">Preschool or early-childhood teacher</option>
+                      <option value="Learning Center">Learning center or sensory studio</option>
+                      <option value="Medical Clinic">Pediatric or therapy clinic</option>
+                    </select>
+                    <div id="en-ea-role-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please select how you plan to use KIIDA.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Request Early Access</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Thank you! Your early access request is ready—if your email app opened, press send or email us
+                    anytime at hello@kiida.app.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 2: Partner Inquiry -->
+            <div role="tabpanel" aria-labelledby="en-tab-partner" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Partner Inquiry Form
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Our partnerships team at <strong>partners@kiida.app</strong> replies within 1–2 working days.
+                </p>
+
+                <form
+                  action="mailto:partners@kiida.app"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="partners@kiida.app"
+                  data-subject="KIIDA Partner Application"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-pt-org">School, studio, or clinic name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-pt-org"
+                        name="organization"
+                        required
+                        autocomplete="organization"
+                        data-error="en-pt-org-error"
+                      />
+                      <div id="en-pt-org-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter your organization name.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-pt-name">Contact person <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-pt-name"
+                        name="contact_name"
+                        required
+                        autocomplete="name"
+                        data-error="en-pt-name-error"
+                      />
+                      <div id="en-pt-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter a contact name.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-pt-email">Work email <span aria-hidden="true">*</span></label>
+                      <span id="en-pt-email-hint" class="hint">Format: name@school.id</span>
+                      <input
+                        type="email"
+                        id="en-pt-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="en-pt-email-hint"
+                        data-error="en-pt-email-error"
+                      />
+                      <div id="en-pt-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Enter an email address in the format name@school.id.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-pt-phone">Phone / WhatsApp number <span aria-hidden="true">*</span></label>
+                      <input
+                        type="tel"
+                        id="en-pt-phone"
+                        name="phone"
+                        required
+                        autocomplete="tel"
+                        data-error="en-pt-phone-error"
+                      />
+                      <div id="en-pt-phone-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter a phone or WhatsApp number.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-pt-type">Program category <span aria-hidden="true">*</span></label>
+                    <select id="en-pt-type" name="category" required data-error="en-pt-type-error">
+                      <option value="">Select category…</option>
+                      <option value="Preschool / Kindergarten">Preschool or Kindergarten</option>
+                      <option value="Sensory Play / Art / Music Studio">Sensory Play, Art, or Music Studio</option>
+                      <option value="Speech / Occupational Therapy Clinic">Speech or Occupational Therapy Clinic</option>
+                      <option value="Pediatric / Developmental Clinic">Pediatric or Child Development Clinic</option>
+                      <option value="Educational Goods / Toys Brand">Developmental Toys &amp; Goods Partner</option>
+                    </select>
+                    <div id="en-pt-type-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please choose your primary category.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-pt-notes">Tell us about your programs &amp; city</label>
+                    <textarea id="en-pt-notes" name="notes" rows="3"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Send Partner Inquiry</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Thank you! Your inquiry is ready to send to partners@kiida.app.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 3: General Message -->
+            <div role="tabpanel" aria-labelledby="en-tab-msg" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Send Us a Message
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Fill out the form below and our team in Jakarta will get back to you within 1–2 working days.
+                </p>
+
+                <form
+                  action="mailto:hello@kiida.app"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="hello@kiida.app"
+                  data-subject="KIIDA Website Contact Message"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="en-ct-name">Your full name <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="en-ct-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        data-error="en-ct-name-error"
+                      />
+                      <div id="en-ct-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Please enter your name.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="en-ct-email">Email address <span aria-hidden="true">*</span></label>
+                      <span id="en-ct-email-hint" class="hint">Format: you@example.com</span>
+                      <input
+                        type="email"
+                        id="en-ct-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="en-ct-email-hint"
+                        data-error="en-ct-email-error"
+                      />
+                      <div id="en-ct-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Enter an email address in the format you@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-ct-topic">Topic <span aria-hidden="true">*</span></label>
+                    <select id="en-ct-topic" name="topic" required data-error="en-ct-topic-error">
+                      <option value="">Choose a topic…</option>
+                      <option value="Family / Early Access">Parent or family inquiry</option>
+                      <option value="School / Teacher">Preschool or teacher onboarding</option>
+                      <option value="Learning Center / Clinic Partnership">Learning center or clinic partnership</option>
+                      <option value="Privacy / Data Request">Privacy or data request</option>
+                      <option value="General Inquiry">General question</option>
+                    </select>
+                    <div id="en-ct-topic-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please choose a topic.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="en-ct-message">Message <span aria-hidden="true">*</span></label>
+                    <textarea
+                      id="en-ct-message"
+                      name="message"
+                      rows="4"
+                      required
+                      data-error="en-ct-message-error"
+                    ></textarea>
+                    <div id="en-ct-message-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Please enter your message.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Thank you! Your message is ready to send—we will reply within 1–2 working days.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-lang="id">
+<div class="section-header">
+            <span class="eyebrow-pill">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Hubungi Kami &amp; Akses Awal</span>
+            </span>
+            <h2 class="section-heading">
+              Daftar akses awal atau <em>berbincang dengan tim kami di Jakarta.</em>
+            </h2>
+            <p class="section-lead">
+              Baik Anda orang tua yang menantikan peluncuran di iOS &amp; Android, sekolah atau klinik yang siap bermitra,
+              maupun ingin mengajukan pertanyaan—tim kami membalas dalam 1–2 hari kerja.
+            </p>
+          </div>
+
+          <div class="cards-grid-3" style="margin-block-end: 2.5rem;">
+            <article class="warm-card is-pink">
+              <h3>Keluarga &amp; Bantuan</h3>
+              <p>Pertanyaan seputar aplikasi KIIDA, akses awal, atau Growth Diary buah hati Anda.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Umum:</strong> <a href="mailto:hello@kiida.app">hello@kiida.app</a><br />
+                <strong>Bantuan:</strong> <a href="mailto:support@kiida.app">support@kiida.app</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-yellow">
+              <h3>Sekolah, Studio &amp; Klinik</h3>
+              <p>Tertarik mendaftarkan guru Anda atau menampilkan kelas dan layanan konsultasi di KIIDA.</p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Kemitraan:</strong> <a href="mailto:partners@kiida.app">partners@kiida.app</a><br />
+                <strong>WhatsApp:</strong> <a href="https://wa.me/6281199008822">+62 811 9900 8822</a>
+              </p>
+            </article>
+
+            <article class="warm-card is-blue">
+              <h3>Kantor Pusat Jakarta</h3>
+              <p>
+                <strong>PT Kiida Tumbuh Bersama</strong><br />
+                District 8, Prosperity Tower Lantai 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia
+              </p>
+              <p style="margin-block-start: auto; padding-block-start: 0.75rem;">
+                <strong>Telepon:</strong> <a href="tel:+622150889900">+62 21 5088 9900</a><br />
+                <strong>Jam Kerja:</strong> Senin – Jumat, 09.00 – 18.00 WIB (GMT+7)<br />
+                <a href="https://maps.google.com/?q=District+8+Prosperity+Tower+SCBD+Jakarta" target="_blank" rel="noopener noreferrer">Buka di Google Maps ↗</a>
+              </p>
+            </article>
+          </div>
+
+          <div class="form-card tabs-container">
+            <div role="tablist" class="tabs-bar" aria-label="Pilih formulir permohonan">
+              <button
+                type="button"
+                role="tab"
+                id="id-tab-ea"
+                data-tab-key="early-access"
+                aria-selected="true"
+                tabindex="0"
+              >
+                Daftar Akses Awal
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="id-tab-partner"
+                data-tab-key="partner"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Kemitraan (Sekolah &amp; Klinik)
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="id-tab-msg"
+                data-tab-key="message"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Pesan Umum
+              </button>
+            </div>
+
+            <!-- Panel 1: Early Access -->
+            <div role="tabpanel" aria-labelledby="id-tab-ea">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Daftar ke Antrean Akses Awal
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Beri tahu kami peran Anda dan kami akan mengundang Anda segera setelah KIIDA hadir di iOS &amp; Android.
+                </p>
+
+                <form
+                  action="mailto:hello@kiida.app"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="hello@kiida.app"
+                  data-subject="Permintaan Akses Awal KIIDA"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-ea-name">Nama lengkap Anda <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-ea-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        enterkeyhint="next"
+                        data-error="id-ea-name-error"
+                      />
+                      <div id="id-ea-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama lengkap Anda.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-ea-email">Alamat email <span aria-hidden="true">*</span></label>
+                      <span id="id-ea-email-hint" class="hint">Format: nama@example.com</span>
+                      <input
+                        type="email"
+                        id="id-ea-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        enterkeyhint="next"
+                        aria-describedby="id-ea-email-hint"
+                        data-error="id-ea-email-error"
+                      />
+                      <div id="id-ea-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Masukkan alamat email dengan format nama@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-ea-role">Saya mendaftar sebagai <span aria-hidden="true">*</span></label>
+                    <select id="id-ea-role" name="role" required data-error="id-ea-role-error">
+                      <option value="">Pilih salah satu…</option>
+                      <option value="Parent">Orang tua atau wali</option>
+                      <option value="Teacher">Guru prasekolah atau PAUD</option>
+                      <option value="Learning Center">Tempat belajar atau studio sensori</option>
+                      <option value="Medical Clinic">Klinik anak atau terapi tumbuh kembang</option>
+                    </select>
+                    <div id="id-ea-role-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Silakan pilih bagaimana Anda berencana menggunakan KIIDA.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Daftar Akses Awal</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Terima kasih! Permintaan akses awal Anda telah siap—jika aplikasi email Anda terbuka, silakan tekan
+                    kirim, atau hubungi kami kapan saja di hello@kiida.app.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 2: Partner Inquiry -->
+            <div role="tabpanel" aria-labelledby="id-tab-partner" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Formulir Kemitraan
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Tim kemitraan kami di <strong>partners@kiida.app</strong> akan membalas dalam 1–2 hari kerja.
+                </p>
+
+                <form
+                  action="mailto:partners@kiida.app"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="partners@kiida.app"
+                  data-subject="Pengajuan Kemitraan KIIDA"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-pt-org">Nama sekolah, studio, atau klinik <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-pt-org"
+                        name="organization"
+                        required
+                        autocomplete="organization"
+                        data-error="id-pt-org-error"
+                      />
+                      <div id="id-pt-org-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama sekolah atau instansi Anda.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-pt-name">Nama penanggung jawab <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-pt-name"
+                        name="contact_name"
+                        required
+                        autocomplete="name"
+                        data-error="id-pt-name-error"
+                      />
+                      <div id="id-pt-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama penanggung jawab.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-pt-email">Email instansi / resmi <span aria-hidden="true">*</span></label>
+                      <span id="id-pt-email-hint" class="hint">Format: nama@sekolah.sch.id</span>
+                      <input
+                        type="email"
+                        id="id-pt-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="id-pt-email-hint"
+                        data-error="id-pt-email-error"
+                      />
+                      <div id="id-pt-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Masukkan alamat email dengan format nama@sekolah.sch.id.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-pt-phone">Nomor telepon / WhatsApp <span aria-hidden="true">*</span></label>
+                      <input
+                        type="tel"
+                        id="id-pt-phone"
+                        name="phone"
+                        required
+                        autocomplete="tel"
+                        data-error="id-pt-phone-error"
+                      />
+                      <div id="id-pt-phone-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nomor telepon atau WhatsApp aktif.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-pt-type">Kategori program <span aria-hidden="true">*</span></label>
+                    <select id="id-pt-type" name="category" required data-error="id-pt-type-error">
+                      <option value="">Pilih kategori…</option>
+                      <option value="Preschool / Kindergarten">Prasekolah, KB, atau TK</option>
+                      <option value="Sensory Play / Art / Music Studio">Studio Bermain Sensori, Seni, atau Musik</option>
+                      <option value="Speech / Occupational Therapy Clinic">Klinik Terapi Wicara atau Okupasi</option>
+                      <option value="Pediatric / Developmental Clinic">Klinik Dokter Anak atau Tumbuh Kembang</option>
+                      <option value="Educational Goods / Toys Brand">Mitra Mainan Edukasi &amp; Perlengkapan Anak</option>
+                    </select>
+                    <div id="id-pt-type-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Silakan pilih kategori utama tempat Anda.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-pt-notes">Ceritakan tentang program &amp; kota domisili Anda</label>
+                    <textarea id="id-pt-notes" name="notes" rows="3"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Kirim Pengajuan Kemitraan</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Terima kasih! Pengajuan kemitraan Anda telah siap dikirim ke partners@kiida.app.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 3: General Message -->
+            <div role="tabpanel" aria-labelledby="id-tab-msg" hidden="until-found">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.55rem; margin-block: 0 0.35rem;">
+                  Kirimkan Pesan untuk Kami
+                </h3>
+                <p style="margin-block: 0 1.25rem; color: var(--text-plum); font-size: 0.95rem;">
+                  Isi formulir di bawah ini dan tim kami di Jakarta akan membalas pesan Anda dalam 1–2 hari kerja.
+                </p>
+
+                <form
+                  action="mailto:hello@kiida.app"
+                  method="POST"
+                  data-kiida-form
+                  data-recipient="hello@kiida.app"
+                  data-subject="Pesan Kontak Website KIIDA"
+                  novalidate
+                >
+                  <div class="cards-grid-2">
+                    <div class="field">
+                      <label for="id-ct-name">Nama lengkap Anda <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="id-ct-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                        data-error="id-ct-name-error"
+                      />
+                      <div id="id-ct-name-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Mohon masukkan nama lengkap Anda.
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label for="id-ct-email">Alamat email <span aria-hidden="true">*</span></label>
+                      <span id="id-ct-email-hint" class="hint">Format: nama@example.com</span>
+                      <input
+                        type="email"
+                        id="id-ct-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        aria-describedby="id-ct-email-hint"
+                        data-error="id-ct-email-error"
+                      />
+                      <div id="id-ct-email-error" class="error-msg">
+                        <span role="img" aria-label="Error">❌</span> Masukkan alamat email dengan format nama@example.com.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-ct-topic">Topik <span aria-hidden="true">*</span></label>
+                    <select id="id-ct-topic" name="topic" required data-error="id-ct-topic-error">
+                      <option value="">Pilih topik…</option>
+                      <option value="Family / Early Access">Pertanyaan seputar keluarga atau akses awal</option>
+                      <option value="School / Teacher">Pendaftaran sekolah atau guru</option>
+                      <option value="Learning Center / Clinic Partnership">Kemitraan tempat belajar atau klinik</option>
+                      <option value="Privacy / Data Request">Permintaan data atau privasi</option>
+                      <option value="General Inquiry">Pertanyaan umum</option>
+                    </select>
+                    <div id="id-ct-topic-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Silakan pilih salah satu topik.
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="id-ct-message">Pesan <span aria-hidden="true">*</span></label>
+                    <textarea
+                      id="id-ct-message"
+                      name="message"
+                      rows="4"
+                      required
+                      data-error="id-ct-message-error"
+                    ></textarea>
+                    <div id="id-ct-message-error" class="error-msg">
+                      <span role="img" aria-label="Error">❌</span> Mohon tuliskan pesan Anda.
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+
+                  <div class="form-status" role="status" aria-live="polite" hidden>
+                    ✓ Terima kasih! Pesan Anda telah siap dikirim—kami akan membalas dalam 1–2 hari kerja.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-logo-box" href="#home" aria-label="KIIDA">
+            <img src="assets/web/kiida-logo-horizontal.png" alt="KIIDA" width="126" height="38" />
+          </a>
+          <p class="footer-tagline" data-lang="en">Parent’s trusted companion in every early step. Helping families, teachers, and learning centers nurture every child’s growth with warmth and clarity.</p>
+          <p class="footer-tagline" data-lang="id">Sahabat terpercaya orang tua di setiap langkah awal anak. Membantu keluarga, guru, dan pusat belajar mendampingi tumbuh kembang anak dengan hangat dan jelas.</p>
+          <p class="footer-entity-line">
+            <span data-lang="en">KIIDA is a product of</span>
+            <span data-lang="id">KIIDA adalah produk dari</span>
+            <strong>PT Kiida Tumbuh Bersama</strong>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">
+            <span data-lang="en">Product</span>
+            <span data-lang="id">Produk</span>
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a href="#home">
+                <span data-lang="en">Overview</span>
+                <span data-lang="id">Ringkasan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#parents">
+                <span data-lang="en">For Parents</span>
+                <span data-lang="id">Untuk Orang Tua</span>
+              </a>
+            </li>
+            <li>
+              <a href="#partners">
+                <span data-lang="en">For Schools & Clinics</span>
+                <span data-lang="id">Untuk Sekolah & Klinik</span>
+              </a>
+            </li>
+            <li>
+              <a href="#pricing">
+                <span data-lang="en">Pricing</span>
+                <span data-lang="id">Harga</span>
+              </a>
+            </li>
+            <li>
+              <a href="#faq">
+                <span data-lang="en">Help & FAQ</span>
+                <span data-lang="id">Bantuan & FAQ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">
+            <span data-lang="en">Company & Support</span>
+            <span data-lang="id">Perusahaan & Bantuan</span>
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a href="#about">
+                <span data-lang="en">About Us</span>
+                <span data-lang="id">Tentang Kami</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <span data-lang="en">Contact Us</span>
+                <span data-lang="id">Hubungi Kami</span>
+              </a>
+            </li>
+            <li>
+              <button type="button" class="footer-link-btn" data-open-dialog="privacy-dialog">
+                <span data-lang="en">Privacy Policy</span>
+                <span data-lang="id">Kebijakan Privasi</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="footer-link-btn" data-open-dialog="terms-dialog">
+                <span data-lang="en">Terms of Service</span>
+                <span data-lang="id">Syarat & Ketentuan</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="footer-link-btn" data-lang-toggle>
+                <span data-lang="en">Bahasa Indonesia</span>
+                <span data-lang="id">English</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">
+            <span data-lang="en">Jakarta Office</span>
+            <span data-lang="id">Kantor Jakarta</span>
+          </h2>
+          <address class="footer-address">
+            <strong>PT Kiida Tumbuh Bersama</strong><br />
+            <span data-lang="en">District 8, Prosperity Tower Level 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia</span>
+            <span data-lang="id">District 8, Prosperity Tower Lantai 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia</span><br /><br />
+            <span>
+              <span data-lang="en">Phone:</span>
+              <span data-lang="id">Telepon:</span>
+              <a href="tel:+622150889900">+62 21 5088 9900</a>
+            </span><br />
+            <span>
+              <span data-lang="en">Email:</span>
+              <span data-lang="id">Email:</span>
+              <a href="mailto:hello@kiida.app">hello@kiida.app</a>
+            </span><br />
+            <span>
+              <span data-lang="en">Hours: Monday – Friday, 09:00 – 18:00 WIB (GMT+7)</span>
+              <span data-lang="id">Jam Kerja: Senin – Jumat, 09.00 – 18.00 WIB (GMT+7)</span>
+            </span>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 PT Kiida Tumbuh Bersama.
+          <span data-lang="en">All rights reserved.</span>
+          <span data-lang="id">Seluruh hak cipta dilindungi.</span>
+        </div>
+        <div class="footer-legal-links">
+          <button type="button" class="footer-link-btn" data-open-dialog="privacy-dialog">
+            <span data-lang="en">Privacy Policy</span>
+            <span data-lang="id">Kebijakan Privasi</span>
+          </button>
+          <button type="button" class="footer-link-btn" data-open-dialog="terms-dialog">
+            <span data-lang="en">Terms of Service</span>
+            <span data-lang="id">Syarat & Ketentuan</span>
+          </button>
+          <a href="#contact">
+            <span data-lang="en">Contact Us</span>
+            <span data-lang="id">Hubungi Kami</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <dialog id="privacy-dialog" class="legal-dialog" closedby="any" aria-labelledby="privacy-dialog-title">
+    <div class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <span class="eyebrow-pill">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span data-lang="en">Privacy Policy • Last Updated: November 2026</span>
+            <span data-lang="id">Kebijakan Privasi • Diperbarui: November 2026</span>
+          </span>
+          <h2 id="privacy-dialog-title" class="dialog-title">
+            <span data-lang="en">Privacy Policy &amp; Children’s Data Protection</span>
+            <span data-lang="id">Kebijakan Privasi &amp; Perlindungan Data Anak</span>
+          </h2>
+        </div>
+        <form method="dialog" class="dialog-close-form">
+          <button id="privacy-dialog-close" type="submit" class="dialog-close-btn" autofocus>
+            <span data-lang="en">Close ✕</span>
+            <span data-lang="id">Tutup ✕</span>
+          </button>
+        </form>
+      </div>
+      <div class="dialog-body">
+        <div data-lang="en">
+<div class="promise-banner" style="margin-block-start: 0;">
+            <strong>Plain-Language Summary:</strong> Your child’s photos, videos, and Growth Diary belong to your
+            family. We never sell personal data or show behavioral ads, we never push products based on your child’s
+            milestone results, and you can export or permanently delete your data at any time.
+          </div>
+
+          <h3>1. Who We Are (Data Controller)</h3>
+          <p>
+            KIIDA is operated by <strong>PT Kiida Tumbuh Bersama</strong>, a company registered in the Republic of Indonesia
+            with its head office at District 8, Prosperity Tower Level 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia (“KIIDA”, “we”, “us”, or “our”). We act as the Personal Data
+            Controller under Indonesia’s Personal Data Protection Law (<em>Undang-Undang Nomor 27 Tahun 2022 tentang
+            Pelindungan Data Pribadi</em> / UU PDP).
+          </p>
+
+          <h3>2. Information We Collect</h3>
+          <ul>
+            <li>
+              <strong>Account &amp; Contact Information:</strong> Parent, teacher, or partner name, email address, phone
+              number, and role.
+            </li>
+            <li>
+              <strong>Child Profile Information:</strong> Child’s first name or nickname, date of birth (used to show
+              the right age-group milestone checklist), and gender.
+            </li>
+            <li>
+              <strong>Activity Photos, Videos &amp; Notes:</strong> Media uploaded by parents or authorized teachers,
+              timestamps, child facial tags within your authorized circle, and observation or well-visit notes.
+            </li>
+            <li>
+              <strong>Booking &amp; Transaction Records:</strong> Class or clinic session bookings, schedule preferences,
+              and payment confirmation details when you book through the Discovery Platform.
+            </li>
+          </ul>
+
+          <h3>3. Children’s Data &amp; Parental Consent</h3>
+          <p>
+            KIIDA is built for adults (parents, legal guardians, authorized educators, and clinicians) caring for young
+            children. Children do not create accounts or use KIIDA directly. A child profile may only be created with the
+            explicit consent of the child’s parent or legal guardian, and classroom observations may only be shared
+            with enrolled families authorized by the parent and school.
+          </p>
+
+          <h3>4. How Automatic Tagging &amp; AI Milestone Analysis Work</h3>
+          <p>
+            When you or your child’s teacher upload a photo or video, KIIDA automatically records the timestamp and uses
+            a private facial identifier solely to organize moments under the correct child profile. KIIDA’s AI engine
+            reviews repeated activity evidence alongside teacher or doctor notes to help track progress against
+            age-based CDC milestone checklists and answer parenting questions in Ask KIIDA chat.
+          </p>
+          <p>
+            <strong>No Diagnostic or Promotional Profiling:</strong> Facial tags and milestone records are strictly
+            isolated to your authorized account. They are never used for third-party advertising and never used to push
+            algorithmic product recommendations.
+          </p>
+
+          <h3>5. Who Can Access Your Information</h3>
+          <ul>
+            <li><strong>Parents &amp; Guardians:</strong> Full access to your child’s Growth Diary, uploads, and bookings.</li>
+            <li><strong>Teachers:</strong> Access limited to uploading classroom activity moments and adding session observation notes for their assigned students.</li>
+            <li><strong>Partner Learning Centers &amp; Clinics:</strong> Access limited to managing their schedules and viewing confirmed bookings and shared session context for enrolled children.</li>
+          </ul>
+
+          <h3>6. Data Retention, Export &amp; Instant Deletion Rights</h3>
+          <p>
+            In accordance with UU PDP No. 27/2022, you have the right to access, correct, export, withdraw consent for,
+            or permanently delete your personal data and your child’s profile at any time. When you delete a photo,
+            video, or child profile in the app—or request deletion via email—we permanently remove it from our active
+            systems within 14 calendar days.
+          </p>
+
+          <h3>7. Contact Our Privacy Team</h3>
+          <p>
+            For any questions or data requests, please contact our Data Protection &amp; Privacy team at
+            <a href="mailto:privacy@kiida.app">privacy@kiida.app</a> or by mail at:
+            <br />
+            <strong>PT Kiida Tumbuh Bersama</strong> — District 8, Prosperity Tower Level 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia • Tel:
+            <a href="tel:+622150889900">+62 21 5088 9900</a>.
+          </p>
+        </div>
+        <div data-lang="id">
+<div class="promise-banner" style="margin-block-start: 0;">
+            <strong>Ringkasan Bahasa Sederhana:</strong> Foto, video, dan Growth Diary buah hati Anda adalah milik
+            keluarga Anda sepenuhnya. Kami tidak pernah menjual data pribadi atau menampilkan iklan perilaku, kami
+            tidak pernah memaksakan produk berdasarkan capaian tumbuh kembang anak, dan Anda berhak mengekspor atau
+            menghapus data Anda secara permanen kapan saja.
+          </div>
+
+          <h3>1. Siapa Kami (Pengendali Data Pribadi)</h3>
+          <p>
+            KIIDA dioperasikan oleh <strong>PT Kiida Tumbuh Bersama</strong>, perseroan terbatas yang didirikan berdasarkan
+            hukum Republik Indonesia dengan kantor pusat di District 8, Prosperity Tower Lantai 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia (“KIIDA”, “kami”, atau “milik
+            kami”). Kami bertindak sebagai Pengendali Data Pribadi berdasarkan Undang-Undang Nomor 27 Tahun 2022 tentang
+            Pelindungan Data Pribadi (UU PDP).
+          </p>
+
+          <h3>2. Informasi yang Kami Kumpulkan</h3>
+          <ul>
+            <li>
+              <strong>Informasi Akun &amp; Kontak:</strong> Nama orang tua, guru, atau mitra, alamat email, nomor
+              telepon, dan peran akun.
+            </li>
+            <li>
+              <strong>Informasi Profil Anak:</strong> Nama panggilan anak, tanggal lahir (digunakan untuk menampilkan
+              daftar pantau tumbuh kembang sesuai kelompok usia), dan jenis kelamin.
+            </li>
+            <li>
+              <strong>Foto, Video &amp; Catatan Aktivitas:</strong> Media yang diunggah oleh orang tua atau guru yang
+              berwenang, penanda waktu otomatis, pengenal visual privat untuk penandaan profil anak dalam lingkaran
+              keluarga berizin Anda, serta catatan observasi dan konsultasi dokter.
+            </li>
+            <li>
+              <strong>Riwayat Pemesanan &amp; Transaksi:</strong> Jadwal pemesanan kelas atau klinik, preferensi waktu
+              sesi, dan rincian konfirmasi pembayaran saat Anda memesan melalui Discovery Platform.
+            </li>
+          </ul>
+
+          <h3>3. Data Anak &amp; Persetujuan Orang Tua</h3>
+          <p>
+            KIIDA dirancang khusus untuk orang dewasa (orang tua, wali yang sah, pendidik berwenang, dan dokter/tenaga
+            medis) yang mendampingi anak usia dini. Anak-anak tidak membuat akun dan tidak menggunakan KIIDA secara
+            langsung. Profil anak hanya dapat dibuat atas persetujuan tegas dari orang tua atau wali yang sah, dan
+            dokumentasi observasi kelas hanya dibagikan kepada keluarga murid yang terdaftar atas persetujuan orang tua
+            dan pihak sekolah.
+          </p>
+
+          <h3>4. Cara Kerja Penandaan Otomatis &amp; Analisis Tumbuh Kembang AI</h3>
+          <p>
+            Saat Anda atau guru mengunggah foto atau video, KIIDA mencatat penanda waktu otomatis dan memanfaatkan
+            pengenal visual privat semata-mata untuk mengelompokkan momen ke profil anak yang sesuai. Mesin AI KIIDA
+            membaca pola aktivitas yang berulang bersama catatan dari guru atau dokter untuk membantu memantau capaian
+            terhadap daftar tahapan tumbuh kembang CDC sesuai usia anak, serta menjawab pertanyaan pengasuhan di fitur
+            tanya jawab Ask KIIDA.
+          </p>
+          <p>
+            <strong>Tanpa Penilaian Diagnostik atau Promosi Iklan:</strong> Penandaan visual dan catatan tahapan
+            perkembangan terisolasi secara ketat di dalam akun keluarga Anda. Data ini tidak pernah digunakan untuk
+            kepentingan periklanan pihak ketiga maupun rekomendasi produk komersial otomatis.
+          </p>
+
+          <h3>5. Pihak yang Dapat Mengakses Informasi Anda</h3>
+          <ul>
+            <li><strong>Orang Tua &amp; Wali:</strong> Akses penuh terhadap Growth Diary, unggahan media, dan pemesanan sesi anak.</li>
+            <li><strong>Guru &amp; Pendidik:</strong> Akses terbatas untuk mengunggah momen kegiatan kelas dan menambahkan catatan observasi sesi bagi murid yang diajar.</li>
+            <li><strong>Tempat Belajar &amp; Klinik Mitra:</strong> Akses terbatas untuk mengelola jadwal sesi dan melihat pemesanan yang terkonfirmasi serta konteks sesi bagi anak yang terdaftar.</li>
+          </ul>
+
+          <h3>6. Retensi Data, Ekspor &amp; Hak Penghapusan Seketika</h3>
+          <p>
+            Sesuai dengan ketentuan UU PDP No. 27/2022, Anda berhak mengakses, memperbaiki, mengunduh (ekspor), menarik
+            persetujuan, atau meminta penghapusan permanen data pribadi Anda beserta profil anak Anda kapan saja. Saat
+            Anda menghapus foto, video, atau profil anak di dalam aplikasi—atau mengajukan permohonan melalui email—kami
+            akan menghapusnya secara permanen dari sistem aktif kami dalam waktu 14 hari kalender.
+          </p>
+
+          <h3>7. Hubungi Tim Privasi Kami</h3>
+          <p>
+            Untuk pertanyaan atau permohonan terkait data pribadi Anda, silakan hubungi tim Pelindungan Data &amp; Privasi
+            kami melalui email di <a href="mailto:privacy@kiida.app">privacy@kiida.app</a> atau melalui surat ke:
+            <br />
+            <strong>PT Kiida Tumbuh Bersama</strong> — District 8, Prosperity Tower Lantai 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia • Tel:
+            <a href="tel:+622150889900">+62 21 5088 9900</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="terms-dialog" class="legal-dialog" closedby="any" aria-labelledby="terms-dialog-title">
+    <div class="dialog-shell">
+      <div class="dialog-header">
+        <div>
+          <span class="eyebrow-pill">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span data-lang="en">Terms of Service • Last Updated: November 2026</span>
+            <span data-lang="id">Syarat &amp; Ketentuan • Diperbarui: November 2026</span>
+          </span>
+          <h2 id="terms-dialog-title" class="dialog-title">
+            <span data-lang="en">Terms of Service &amp; Booking Policy</span>
+            <span data-lang="id">Syarat &amp; Ketentuan Layanan &amp; Pemesanan</span>
+          </h2>
+        </div>
+        <form method="dialog" class="dialog-close-form">
+          <button id="terms-dialog-close" type="submit" class="dialog-close-btn" autofocus>
+            <span data-lang="en">Close ✕</span>
+            <span data-lang="id">Tutup ✕</span>
+          </button>
+        </form>
+      </div>
+      <div class="dialog-body">
+        <div data-lang="en">
+<div class="promise-banner" style="margin-block-start: 0;">
+            <strong>Summary:</strong> KIIDA is free to start for parents and teachers. When you book a class or clinic
+            session on the Discovery Platform, a flat IDR 5,000 service fee applies and you have 1 hour to complete
+            payment to hold your slot. KIIDA is an educational companion, not a medical provider.
+          </div>
+
+          <h3>1. Overview &amp; Operator</h3>
+          <p>
+            These Terms of Service (“Terms”) form an agreement between you and <strong>PT Kiida Tumbuh Bersama</strong>,
+            located at District 8, Prosperity Tower Level 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia, governing your access to and use of the KIIDA mobile application,
+            website, and Partner Web Dashboard.
+          </p>
+
+          <h3>2. Accounts &amp; User Roles</h3>
+          <ul>
+            <li>
+              <strong>Parents &amp; Legal Guardians:</strong> You represent that you are at least 18 years old and are
+              the parent or legal guardian of any child profile you create.
+            </li>
+            <li>
+              <strong>Teachers &amp; Educators:</strong> You may upload classroom media and observation notes only for
+              children enrolled in your school with parental authorization.
+            </li>
+            <li>
+              <strong>Partner Learning Centers &amp; Clinics:</strong> You are responsible for the accuracy of your
+              published schedules, service descriptions, and professional credentials on the KIIDA Web Dashboard.
+            </li>
+          </ul>
+
+          <h3>3. Free Weekly Upload Allowances</h3>
+          <p>
+            KIIDA provides a free weekly media upload allowance so families and educators can use the Growth Diary at no
+            cost:
+          </p>
+          <ul>
+            <li><strong>Parents:</strong> Up to 5 photos per week and 2 videos per week free.</li>
+            <li><strong>Teachers:</strong> Up to 7 photos per week per child and 3 videos per week per child free.</li>
+          </ul>
+
+          <h3>4. Discovery Platform Bookings, Service Fee &amp; Partner Payouts</h3>
+          <ul>
+            <li>
+              <strong>Booking Service Fee:</strong> A flat administration and service fee of <strong>IDR 5,000</strong>
+              applies to each confirmed booking on the Discovery Platform and is displayed clearly before payment.
+            </li>
+            <li>
+              <strong>1-Hour Payment Window &amp; Reminders:</strong> Submitting a booking form reserves your selected
+              slot for 1 hour. If payment is not completed within 1 hour, automated reminders are sent every 24 hours up
+              until the day before the session (D-1).
+            </li>
+            <li>
+              <strong>Confirmation &amp; Calendar Update:</strong> Once payment is confirmed, your KIIDA Family Calendar
+              and the provider’s available slot count are updated automatically.
+            </li>
+            <li>
+              <strong>Partner Settlement:</strong> For completed bookings, KIIDA transfers the net booking proceeds to
+              the partner learning center or clinic 24 hours prior to the scheduled session date (D-Day minus 24 hours).
+            </li>
+          </ul>
+
+          <h3>5. Educational &amp; Non-Medical Disclaimer</h3>
+          <p>
+            KIIDA’s milestone checklists (aligned with public CDC developmental guidelines), AI pattern summaries, and
+            Ask KIIDA chat responses are provided for informational and educational support only. KIIDA does not practice
+            medicine, does not provide medical diagnoses, and should never be used in place of advice from a qualified
+            pediatrician or healthcare professional.
+          </p>
+
+          <h3>6. Governing Law &amp; Contact Information</h3>
+          <p>
+            These Terms are governed by the laws of the Republic of Indonesia. If you have questions regarding these
+            Terms, please contact <strong>PT Kiida Tumbuh Bersama</strong> at
+            <a href="mailto:hello@kiida.app">hello@kiida.app</a> or call
+            <a href="tel:+622150889900">+62 21 5088 9900</a>.
+          </p>
+        </div>
+        <div data-lang="id">
+<div class="promise-banner" style="margin-block-start: 0;">
+            <strong>Ringkasan:</strong> KIIDA gratis untuk dimulai bagi orang tua dan guru. Saat Anda memesan kelas atau
+            sesi klinik di Discovery Platform, berlaku biaya layanan tetap sebesar Rp5.000 dan Anda memiliki waktu 1 jam
+            untuk menyelesaikan pembayaran guna mengunci kuota Anda. KIIDA adalah sarana edukatif, bukan penyedia layanan
+            medis.
+          </div>
+
+          <h3>1. Gambaran Umum &amp; Pengelola</h3>
+          <p>
+            Syarat dan Ketentuan Layanan ini (“Ketentuan”) merupakan perjanjian antara Anda dan <strong>PT Kiida Tumbuh Bersama</strong>,
+            beralamat di District 8, Prosperity Tower Lantai 18, Jl. Jend. Sudirman Kav. 52-53, SCBD, Jakarta Selatan, DKI Jakarta 12190, Indonesia, yang mengatur akses dan penggunaan Anda terhadap aplikasi mobile KIIDA,
+            situs web, serta Dashboard Web Mitra.
+          </p>
+
+          <h3>2. Akun &amp; Peran Pengguna</h3>
+          <ul>
+            <li>
+              <strong>Orang Tua &amp; Wali Sah:</strong> Anda menyatakan bahwa Anda telah berusia minimal 18 tahun dan
+              merupakan orang tua atau wali yang sah dari setiap profil anak yang Anda buat.
+            </li>
+            <li>
+              <strong>Guru &amp; Pendidik:</strong> Anda hanya diperkenankan mengunggah dokumentasi kelas dan catatan
+              observasi untuk murid yang terdaftar di sekolah Anda dengan izin resmi dari orang tua.
+            </li>
+            <li>
+              <strong>Tempat Belajar &amp; Klinik Mitra:</strong> Anda bertanggung jawab penuh atas keakuratan jadwal
+              kegiatan, deskripsi layanan, dan kualifikasi profesional yang Anda tampilkan di Dashboard Web KIIDA.
+            </li>
+          </ul>
+
+          <h3>3. Batas Unggahan Mingguan Gratis</h3>
+          <p>
+            KIIDA menyediakan kuota unggahan media mingguan gratis agar keluarga dan pendidik dapat memanfaatkan Growth
+            Diary tanpa biaya:
+          </p>
+          <ul>
+            <li><strong>Orang Tua:</strong> Hingga 5 foto per minggu dan 2 video per minggu gratis.</li>
+            <li><strong>Guru:</strong> Hingga 7 foto per minggu per anak dan 3 video per minggu per anak gratis.</li>
+          </ul>
+
+          <h3>4. Pemesanan Discovery Platform, Biaya Layanan &amp; Pencairan Dana Mitra</h3>
+          <ul>
+            <li>
+              <strong>Biaya Layanan Pemesanan:</strong> Biaya administrasi dan layanan tetap sebesar <strong>Rp5.000</strong>
+              berlaku untuk setiap pemesanan yang terkonfirmasi di Discovery Platform dan ditampilkan transparan sebelum
+              pembayaran.
+            </li>
+            <li>
+              <strong>Batas Waktu Pembayaran 1 Jam &amp; Pengingat:</strong> Mengirimkan formulir pemesanan menahan slot
+              yang Anda pilih selama 1 jam. Jika pembayaran belum selesai dalam 1 jam, pengingat otomatis akan dikirimkan
+              setiap 24 jam hingga satu hari sebelum pelaksanaan kegiatan (H-1).
+            </li>
+            <li>
+              <strong>Konfirmasi &amp; Sinkronisasi Kalender:</strong> Setelah pembayaran terkonfirmasi, Kalender Keluarga
+              KIIDA Anda dan kuota sesi mitra yang tersedia diperbarui secara otomatis.
+            </li>
+            <li>
+              <strong>Penyelesaian Dana Mitra:</strong> Untuk pemesanan yang telah terkonfirmasi, KIIDA mencairkan dana
+              bersih pemesanan kepada pihak tempat belajar atau klinik 24 jam sebelum tanggal sesi yang dijadwalkan (H-1).
+            </li>
+          </ul>
+
+          <h3>5. Penafian Edukatif &amp; Non-Medis</h3>
+          <p>
+            Daftar pantau tahapan tumbuh kembang KIIDA (yang berpedoman pada panduan tumbuh kembang publik CDC),
+            ringkasan pola AI, dan jawaban tanya jawab Ask KIIDA disediakan semata-mata untuk tujuan informasi dan
+            pendampingan edukatif. KIIDA tidak menjalankan praktik kedokteran, tidak memberikan diagnosis medis, dan tidak
+            boleh digunakan sebagai pengganti saran dari dokter spesialis anak atau tenaga kesehatan profesional yang
+            berkualifikasi.
+          </p>
+
+          <h3>6. Hukum yang Berlaku &amp; Informasi Kontak</h3>
+          <p>
+            Syarat dan Ketentuan ini diatur dan ditafsirkan sesuai dengan hukum yang berlaku di Republik Indonesia.
+            Apabila Anda memiliki pertanyaan seputar Ketentuan ini, silakan hubungi <strong>PT Kiida Tumbuh Bersama</strong>
+            melalui email di <a href="mailto:hello@kiida.app">hello@kiida.app</a> atau hubungi
+            <a href="tel:+622150889900">+62 21 5088 9900</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
